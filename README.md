@@ -10,7 +10,7 @@
 
 > The software has been tested only with **Spotify 1.0.75.483.g7ff4a0dc**.<br>I can't guarantee that it works with other versions.
 
-Download the latest version from the ![Releases](releases) section.
+Download the latest version from the ![Releases](https://github.com/JakubSteplowski/SpotifyLyricsNET/releases) section.
 
 ## To use the source:
 - Visual Studio 2017
