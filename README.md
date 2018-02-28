@@ -1,5 +1,5 @@
 # Spotify Lyrics .NET
-> Get the lyrics of the song you're listening on Spotify
+> Get the lyrics of the song you're listening to on Spotify
 
 ![](/Screenshots/SpotifyLyricsNET-v0.1.0.png)
 
