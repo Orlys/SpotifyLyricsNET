@@ -1,0 +1,12 @@
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\bin\Release\SpotifyLyrics.NET.exe.config
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\bin\Release\SpotifyLyrics.NET.exe
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\bin\Release\SpotifyLyrics.NET.pdb
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\bin\Release\HtmlAgilityPack.dll
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\bin\Release\HtmlAgilityPack.pdb
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\bin\Release\HtmlAgilityPack.xml
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\obj\Release\SpotifyLyrics.NET.Form1.resources
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\obj\Release\SpotifyLyrics.NET.Properties.Resources.resources
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\obj\Release\SpotifyLyrics.NET.csproj.GenerateResource.Cache
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\obj\Release\SpotifyLyrics.NET.csproj.CoreCompileInputs.cache
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\obj\Release\SpotifyLyrics.NET.exe
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\C#\SpotifyLyrics.NET\SpotifyLyrics.NET\obj\Release\SpotifyLyrics.NET.pdb

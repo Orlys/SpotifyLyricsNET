@@ -21,14 +21,13 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 - Find the song title and author of the current playing song on Spotify
 - Search and get the lyrics from Musixmatch
 - Change lyrics if the found one are wrong (move through search results)
-- Made in VB.NET
+- Source available in two languages: C# and VB.NET
 
 # Planned features
 - Support for other sources
 - Improve UI and remove loading glithces
 - Improve performance
 - Improve the code (create separate classes)
-- Make a C# version
 
 # Used resources
 
