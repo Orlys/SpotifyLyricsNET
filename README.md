@@ -24,10 +24,10 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 - Source available in two languages: C# and VB.NET
 
 # Planned features
-- Support for other sources
-- Improve UI and remove loading glithces
-- Improve performance
-- Improve the code (create separate classes)
+- Support for other lyrics sources
+- Improved UI and fixed loading glithces
+- Improved performance
+- Improved code (create separate classes)
 
 # Used resources
 
