@@ -4,8 +4,8 @@ Imports System.Net
 Imports HtmlAgilityPack
 
 Public Class Form1
-    Const appVERSION As String = "v0.1.0"
-    Const appBUILD As String = "28.02.2018"
+    Const appVERSION As String = "v0.2.3"
+    Const appBUILD As String = "02.03.2018"
     Const appAuthor As String = "Jakub Stęplowski"
     Const appAuthorWebsite As String = "https://jakubsteplowski.com"
     Const LEFTMARGIN As Integer = 24
@@ -13,12 +13,68 @@ Public Class Form1
     Dim currentSongTitle As String = ""
     Dim currentLyricsIndx As Integer = -1
     Dim lyricsURLs As New ArrayList
+    Dim settingsLoaded As Boolean = False
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        versionLabel.Text = appVERSION & " (" & appBUILD & ")"
+        versionLabel.Text = appVERSION '& " (" & appBUILD & ")"
+
+        'Load Settings
+        loadTheme(My.Settings.theme)
+        topmostCheck.Checked = My.Settings.topMost
+        Me.TopMost = My.Settings.topMost
+        If My.Settings.width > 0 Then
+            Me.Width = My.Settings.width
+            Me.Height = My.Settings.height
+        End If
+        If My.Settings.xPos > 0 Then
+            Me.Left = My.Settings.xPos
+            Me.Top = My.Settings.yPos
+        End If
+        settingsLoaded = True
     End Sub
 
 #Region "UI"
+    'Themes
+    Private Sub loadTheme(ByVal themeID As Integer)
+        Dim bg1, bg2, txt As Color
+
+        Select Case themeID
+            Case 0 'Light (Default)
+                bg1 = Color.White
+                bg2 = Color.WhiteSmoke
+                txt = Color.Black
+                ChangeThemeToolStripMenuItem.Image = My.Resources.settings
+            Case 1 'Dark
+                bg1 = Color.FromArgb(14, 14, 14)
+                bg2 = Color.FromArgb(10, 10, 10)
+                txt = Color.FromArgb(245, 245, 245)
+                ChangeThemeToolStripMenuItem.Image = My.Resources.settings_white
+        End Select
+
+        'Set colors
+        Me.BackColor = bg1
+        Panel1.BackColor = bg2
+        separator.BackColor = bg2
+        titleLabel.ForeColor = txt
+        artistLabel.ForeColor = txt
+        lyricsLabel.ForeColor = txt
+        countLabel.ForeColor = txt
+        versionLabel.ForeColor = txt
+        topmostCheck.ForeColor = txt
+
+        'Save settings
+        My.Settings.theme = themeID
+        My.Settings.Save()
+    End Sub
+
+    Private Sub LightToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LightToolStripMenuItem.Click
+        loadTheme(0)
+    End Sub
+
+    Private Sub DarkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DarkToolStripMenuItem.Click
+        loadTheme(1)
+    End Sub
+
     'Fix the width of the Lyrics label
     Private Sub fixLyricsLabelPosition()
         lyricsLabel.MaximumSize = New Point(Me.Width - (LEFTMARGIN * 2), 0)
@@ -30,6 +86,22 @@ Public Class Form1
 
     Private Sub Form1_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
         fixLyricsLabelPosition()
+
+        'Save window size
+        If settingsLoaded Then
+            My.Settings.width = Me.Width
+            My.Settings.height = Me.Height
+            My.Settings.Save()
+        End If
+    End Sub
+
+    Private Sub Form1_LocationChanged(sender As Object, e As EventArgs) Handles Me.LocationChanged
+        'Save window position
+        If settingsLoaded Then
+            My.Settings.xPos = Me.Left
+            My.Settings.yPos = Me.Top
+            My.Settings.Save()
+        End If
     End Sub
 
     Public Sub setBtnStatus(ByVal status As Boolean)
@@ -38,7 +110,12 @@ Public Class Form1
     End Sub
 
     Private Sub topmostCheck_CheckedChanged(sender As Object, e As EventArgs) Handles topmostCheck.CheckedChanged
-        Me.TopMost = CType(sender, CheckBox).Checked
+        'Save top most status
+        If settingsLoaded Then
+            Me.TopMost = CType(sender, CheckBox).Checked
+            My.Settings.topMost = CType(sender, CheckBox).Checked
+            My.Settings.Save()
+        End If
     End Sub
 
     Private Sub nextBtn_Click(sender As Object, e As EventArgs) Handles nextBtn.Click
@@ -75,13 +152,13 @@ Public Class Form1
     Private Sub setSong(ByVal title As String)
         currentSongTitle = title
 
-        Dim titleParser As New ArrayList
-        titleParser.AddRange(title.Split("-"))
+        If title.Contains(" - ") Then
+            Dim artist As String = title.Substring(0, title.IndexOf(" -"))
+            Dim songTitle As String = title.Replace(artist & " - ", "")
 
-        If titleParser.Count > 1 Then
-            titleLabel.Text = titleParser(1).ToString.Trim
-            authorLabel.Text = titleParser(0).ToString.Trim
-            getLyrics(titleParser(0).ToString.Trim, titleParser(1).ToString.Trim)
+            titleLabel.Text = songTitle
+            artistLabel.Text = artist
+            getLyrics(artist, songTitle)
         End If
     End Sub
 
@@ -119,13 +196,13 @@ Public Class Form1
         Else
             lyricsLabel.Text = "I can't find the lyrics, sorry. :("
             setBtnStatus(False)
-            countLabel.Text = "Wrong Song? Try other lyrics: 0 of 0"
+            countLabel.Text = "0 of 0"
         End If
     End Sub
 
     Public Sub setLyrics(ByVal indx As Integer)
         currentLyricsIndx = indx
-        countLabel.Text = "Wrong Song? Try other lyrics: " & (indx + 1) & " of " & lyricsURLs.Count
+        countLabel.Text = (indx + 1) & " of " & lyricsURLs.Count
 
         Dim responseLyrics As String = getHTTPSRequest(WebUtility.HtmlEncode(lyricsURLs(indx)))
         Dim lyricsDoc As New HtmlAgilityPack.HtmlDocument()
@@ -136,7 +213,7 @@ Public Class Form1
         For Each p As HtmlNode In nodes
             Try
                 If p.Attributes.Item("class").Value.Contains("mxm-lyrics__content") Then
-                    lyricsLabel.Text &= p.InnerText
+                    lyricsLabel.Text &= p.InnerText & vbCrLf
                 End If
             Catch
             End Try

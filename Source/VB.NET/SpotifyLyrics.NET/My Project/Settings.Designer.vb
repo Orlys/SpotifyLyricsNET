@@ -53,6 +53,90 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property theme() As Integer
+            Get
+                Return CType(Me("theme"),Integer)
+            End Get
+            Set
+                Me("theme") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property topMost() As Boolean
+            Get
+                Return CType(Me("topMost"),Boolean)
+            End Get
+            Set
+                Me("topMost") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property width() As Integer
+            Get
+                Return CType(Me("width"),Integer)
+            End Get
+            Set
+                Me("width") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property height() As Integer
+            Get
+                Return CType(Me("height"),Integer)
+            End Get
+            Set
+                Me("height") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property xPos() As Integer
+            Get
+                Return CType(Me("xPos"),Integer)
+            End Get
+            Set
+                Me("xPos") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property yPos() As Integer
+            Get
+                Return CType(Me("yPos"),Integer)
+            End Get
+            Set
+                Me("yPos") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property opacity() As Double
+            Get
+                Return CType(Me("opacity"),Double)
+            End Get
+            Set
+                Me("opacity") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

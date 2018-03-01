@@ -129,6 +129,10 @@
     <None Include="Resources\right.png" />
     <None Include="Resources\spotify-512.png" />
     <None Include="Resources\left.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\settings-white.png" />
+    <None Include="Resources\theme0.png" />
+    <None Include="Resources\theme1.png" />
     <Content Include="spotify-512.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

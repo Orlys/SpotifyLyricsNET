@@ -11,8 +11,8 @@ namespace SpotifyLyrics.NET
 {
     public partial class Form1 : Form
     {
-        const String appVERSION = "v0.1.0",
-                     appBUILD = "28.02.2018",
+        const String appVERSION = "v0.2.3",
+                     appBUILD = "02.03.2018",
                      appAuthor = "Jakub Stęplowski",
                      appAuthorWebsite = "https://jakubsteplowski.com";
         const int LEFTMARGIN = 24;
@@ -20,6 +20,7 @@ namespace SpotifyLyrics.NET
         String currentSongTitle = "";
         int currentLyricsIndx = -1;
         ArrayList lyricsURLs = new ArrayList();
+        bool settingsLoaded = false;
 
         public Form1()
         {
@@ -28,10 +29,70 @@ namespace SpotifyLyrics.NET
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            versionLabel.Text = appVERSION + " (" + appBUILD + ")";
+            versionLabel.Text = appVERSION;
+
+            // Load Settings
+            loadTheme(Properties.Settings.Default.theme);
+            topmostCheck.Checked = Properties.Settings.Default.topMost;
+            this.TopMost = Properties.Settings.Default.topMost;
+            if (Properties.Settings.Default.width > 0)
+            {
+                this.Width = Properties.Settings.Default.width;
+                this.Height = Properties.Settings.Default.height;
+            }
+            if (Properties.Settings.Default.xPos > 0)
+            {
+                this.Left = Properties.Settings.Default.xPos;
+                this.Top = Properties.Settings.Default.yPos;
+            }
+            settingsLoaded = true;
         }
 
         #region UI
+        // Themes
+        private void loadTheme(int themeID)
+        {
+            Color bg1 = Color.White, bg2 = Color.WhiteSmoke, txt = Color.Black;
+
+            switch (themeID)
+            {
+                case 1: //Dark
+                    bg1 = Color.FromArgb(14, 14, 14);
+                    bg2 = Color.FromArgb(10, 10, 10);
+                    txt = Color.FromArgb(245, 245, 245);
+                    ChangeThemeToolStripMenuItem.Image = Properties.Resources.settings_white;
+                    break;
+                default:
+                    ChangeThemeToolStripMenuItem.Image = Properties.Resources.settings;
+                    break;
+            }
+
+            // Set colors
+            this.BackColor = bg1;
+            Panel1.BackColor = bg2;
+            separator.BackColor = bg2;
+            titleLabel.ForeColor = txt;
+            artistLabel.ForeColor = txt;
+            lyricsLabel.ForeColor = txt;
+            countLabel.ForeColor = txt;
+            versionLabel.ForeColor = txt;
+            topmostCheck.ForeColor = txt;
+
+            // Save Settings
+            Properties.Settings.Default.theme = themeID;
+            Properties.Settings.Default.Save();
+        }
+
+        private void LightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadTheme(0);
+        }
+
+        private void DarkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadTheme(1);
+        }
+
         private void fixLyricsLabelPosition()
         {
             lyricsLabel.MaximumSize = new Size(this.Width - (LEFTMARGIN * 2), 0);
@@ -45,6 +106,25 @@ namespace SpotifyLyrics.NET
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
             fixLyricsLabelPosition();
+
+            // Save window size
+            if (settingsLoaded)
+            {
+                Properties.Settings.Default.width = this.Width;
+                Properties.Settings.Default.height = this.Height;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void Form1_LocationChanged(object sender, EventArgs e)
+        {
+            // Save window position
+            if (settingsLoaded)
+            {
+                Properties.Settings.Default.xPos = this.Left;
+                Properties.Settings.Default.yPos = this.Top;
+                Properties.Settings.Default.Save();
+            }
         }
 
         public void setBtnStatus(bool status)
@@ -55,7 +135,13 @@ namespace SpotifyLyrics.NET
 
         private void topmostCheck_CheckedChanged(object sender, EventArgs e)
         {
-            this.TopMost = topmostCheck.Checked;
+            // Save top most status
+            if (settingsLoaded)
+            {
+                this.TopMost = topmostCheck.Checked;
+                Properties.Settings.Default.topMost = topmostCheck.Checked;
+                Properties.Settings.Default.Save();
+            }
         }
 
         private void nextBtn_Click(object sender, EventArgs e)
@@ -105,18 +191,14 @@ namespace SpotifyLyrics.NET
         {
             currentSongTitle = title;
 
-            ArrayList titleParser = new ArrayList();
-            titleParser.AddRange(title.Split('-'));
-
-            if (titleParser.Count > 1)
+            if (title.Contains(" - "))
             {
-                titleLabel.Text = (String)titleParser[1];
-                titleLabel.Text = titleLabel.Text.Trim(' ');
+                String artist = title.Substring(0, title.IndexOf(" -"));
+                String songTitle = title.Replace(artist + " - ", "");
 
-                authorLabel.Text = (String)titleParser[0];
-                authorLabel.Text = authorLabel.Text.Trim(' ');
-
-                getLyrics(authorLabel.Text, titleLabel.Text);
+                titleLabel.Text = songTitle;
+                artistLabel.Text = artist;
+                getLyrics(artist, songTitle);
             }
         }
 
@@ -157,14 +239,14 @@ namespace SpotifyLyrics.NET
             {
                 lyricsLabel.Text = "I can't find the lyrics, sorry. :(";
                 setBtnStatus(false);
-                countLabel.Text = "Wrong Song? Try other lyrics: 0 of 0";
+                countLabel.Text = "0 of 0";
             }
         }
 
         private void setLyrics(int indx)
         {
             currentLyricsIndx = indx;
-            countLabel.Text = "Wrong Song? Try other lyrics: " + (indx + 1) + " of " + lyricsURLs.Count;
+            countLabel.Text = (indx + 1) + " of " + lyricsURLs.Count;
 
             String responseLyrics = getHTTPSRequest(WebUtility.HtmlEncode((String)lyricsURLs[indx]));
             HtmlAgilityPack.HtmlDocument lyricsDoc = new HtmlAgilityPack.HtmlDocument();
@@ -179,7 +261,7 @@ namespace SpotifyLyrics.NET
                 {
                     if (p.Attributes["class"].Value.Contains("mxm-lyrics__content"))
                     {
-                        lyricsLabel.Text += p.InnerText;
+                        lyricsLabel.Text += p.InnerText + System.Environment.NewLine;
                     }
                 } catch (Exception ex)
                 {

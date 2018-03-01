@@ -1,7 +1,8 @@
 # Spotify Lyrics .NET
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/v-0.2.3-blue.svg?style=flat)
 > Get the lyrics of the song you're listening to on Spotify
 
-![](/Screenshots/SpotifyLyricsNET-v0.1.0.png)
+![](/Screenshots/SpotifyLyricsNET-v0.2.3.png)
 
 # Requirements
 ## To use the software:
@@ -17,13 +18,24 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 - .NET Framework 4.6.1 or newer
 - NuGet HtmlAgilityPack 1.7.0 package
 
-# Current features
-- Find the song title and author of the current playing song on Spotify
-- Search and get the lyrics from Musixmatch
-- Change lyrics if the found one are wrong (move through search results)
-- Source available in two languages: C# and VB.NET
+# Changelog
 
-# Planned features
+>v0.2.3:
+>- Added support for themes: light, dark
+>- Improved and fixed UI
+>- The window position and size are now saved and restored at launch
+>- The "Always on Top" status is now saved and restored at launch
+>- Fixed lyrics formatting
+>- Fixed song title parser
+
+>v0.1.0:
+>- First public version
+>- Find the song title and author of the current playing song on Spotify
+>- Search and get the lyrics from Musixmatch
+>- Change lyrics if the found one are wrong (move through search results)
+>- Source available in two languages: C# and VB.NET
+
+## Planned features
 - Support for other lyrics sources
 - Improved UI and fixed loading glithces
 - Improved performance

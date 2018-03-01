@@ -32,7 +32,27 @@ SpotifyLyrics.NET
   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SpotifyLyrics.NET.My.Resources.Resources.settings">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpotifyLyrics.NET.My.Resources.Resources.settings_white">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SpotifyLyrics.NET.My.Resources.Resources.spotify_512">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpotifyLyrics.NET.My.Resources.Resources.theme0">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpotifyLyrics.NET.My.Resources.Resources.theme1">
 <summary>
   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
 </summary>

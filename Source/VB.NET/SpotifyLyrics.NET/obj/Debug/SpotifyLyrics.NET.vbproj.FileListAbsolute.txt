@@ -13,3 +13,48 @@ C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics\SpotifyLyricsNET\Spo
 C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics\SpotifyLyricsNET\SpotifyLyrics.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.dll
 C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics\SpotifyLyricsNET\SpotifyLyrics.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics\SpotifyLyricsNET\SpotifyLyrics.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.xml
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.exe.config
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.exe
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.pdb
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.xml
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.dll
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.xml
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.vbprojResolveAssemblyReference.cache
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.Form1.resources
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.Resources.resources
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.vbproj.GenerateResource.Cache
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.vbproj.CoreCompileInputs.cache
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.exe
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.xml
+C:\Users\jakub\Source\Repos\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.pdb
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.exe.config
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.exe
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.pdb
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.xml
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.dll
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.xml
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.vbprojResolveAssemblyReference.cache
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.Form1.resources
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.Resources.resources
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.vbproj.GenerateResource.Cache
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.vbproj.CoreCompileInputs.cache
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.exe
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.xml
+C:\Users\jakub\Source\Repos\JSprojects\Other\SpotifyLyricsNET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.pdb
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.exe.config
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.exe
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.pdb
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\SpotifyLyrics.NET.xml
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.dll
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\bin\Debug\HtmlAgilityPack.xml
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.vbprojResolveAssemblyReference.cache
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.Form1.resources
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.Resources.resources
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.vbproj.GenerateResource.Cache
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.vbproj.CoreCompileInputs.cache
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.exe
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.xml
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET\SpotifyLyrics.NET\obj\Debug\SpotifyLyrics.NET.pdb
