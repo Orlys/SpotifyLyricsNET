@@ -1,0 +1,141 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Spotify_Lyrics.NET"
+        mc:Ignorable="d"
+        Title="Spotify Lyrics .NET" Height="620" Width="600" MinHeight="300" MinWidth="450" Icon="spotify-512.ico" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="RoundCorner" TargetType="{x:Type Button}">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="grid">
+                            <Border x:Name="border" CornerRadius="15" Background="#1db954">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          TextElement.FontWeight="Bold">
+                                </ContentPresenter>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#1ed760"/>
+                                <Setter Property="Height" TargetName="grid" Value="{Binding Height+150}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#14833b"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" TargetName="border" Value="0.25"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid x:Name="mainGrid">
+        <Grid.RowDefinitions>
+            <!-- Menu -->
+            <RowDefinition Height="auto"/>
+            <!-- Header -->
+            <RowDefinition Height="95"/>
+            <!-- Body -->
+            <RowDefinition Height="1*"/>
+            <!-- Footer -->
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Menu -->
+        <Grid x:Name="menuGrid" Grid.Row="0" Background="#282828" Height="30" Visibility="Collapsed">
+            <Menu Background="Transparent" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#8d8d8d">
+                <MenuItem Height="30" Header="File"></MenuItem>
+                <MenuItem Height="30" Header="Edit"></MenuItem>
+                <MenuItem Height="30" Header="Help"></MenuItem>
+            </Menu>
+        </Grid>
+
+        <!-- Header -->
+        <Grid x:Name="headerGrid" Grid.Row="1" Background="#181818">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" VerticalAlignment="Center" Margin="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Margin="0,0,0,0">
+                    <TextBlock x:Name="songTitleLabel" TextTrimming="WordEllipsis" Text="Spotify Lyrics .NET" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#FFF" FontSize="22"/>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <TextBlock x:Name="artistLabel" Text="Jakub Stęplowski" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#b3b3b3" FontSize="14"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Column="1" Margin="20,0" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="prevBtn" Grid.Column="0" Width="50" Height="32" Style="{DynamicResource RoundCorner}" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Medium" Foreground="#FFF" FontSize="11" HorizontalAlignment="Right" Margin="0,0,2,0">
+                        &lt;
+                    </Button>
+                    <Button x:Name="nextBtn" Grid.Column="1" Width="50" Height="32" Style="{DynamicResource RoundCorner}" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Medium" Foreground="#FFF" FontSize="11" HorizontalAlignment="Right" Margin="2,0,0,0">
+                        >
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Row="1" HorizontalAlignment="Center">
+                    <TextBlock x:Name="countLabel" Text="0 of 0" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#b3b3b3" FontSize="14" TextAlignment="Center"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!-- Body -->
+        <Grid x:Name="bodyGrid" Grid.Row="2" Background="#181818">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <ListView Padding="0,20" x:Name="lyricsView" Background="Transparent" BorderThickness="0"/>
+            </ScrollViewer>
+        </Grid>
+
+        <!-- Footer -->
+        <Grid x:Name="footerGrid" Grid.Row="3" Background="#181818">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" VerticalAlignment="Center" Margin="10,10">
+                <TextBlock x:Name="versionLabel" Text="" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#8d8d8d" FontSize="11"/>
+            </Grid>
+
+            <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10">
+                <CheckBox x:Name="darkTheme" Content="Dark theme" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#8d8d8d" FontSize="11"/>
+            </Grid>
+
+            <Grid Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10">
+                <CheckBox x:Name="topmostCheck" Content="Always on Top" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#8d8d8d" FontSize="11"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

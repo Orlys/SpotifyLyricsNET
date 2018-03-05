@@ -1,13 +1,14 @@
 # Spotify Lyrics .NET
-![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/v-0.2.3-blue.svg?style=flat)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/v-0.3.0-blue.svg?style=flat)
 > Get the lyrics of the song you're listening to on Spotify
 
-![](/Screenshots/SpotifyLyricsNET-v0.2.3.png)
+![](/Screenshots/SpotifyLyricsNET-v0.3.0.png)
 
 # Requirements
 ## To use the software:
 - .NET Framework 4.6.1 or newer
 - Spotify
+- Internet Connection
 
 > The software has been tested only with **Spotify 1.0.75.483.g7ff4a0dc**.<br>I can't guarantee that it works with other versions.
 
@@ -16,9 +17,14 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 ## To use the source:
 - Visual Studio 2017
 - .NET Framework 4.6.1 or newer
-- NuGet HtmlAgilityPack 1.7.0 package
+- NuGet HtmlAgilityPack 1.7.1 package
 
 # Changelog
+
+>v0.3.0:
+>- New improved UI
+>- Project converted to WPF
+>*(currently the source for this version is available only in VB.NET)*
 
 >v0.2.3:
 >- Added support for themes: light, dark
@@ -44,4 +50,5 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 # Used resources
 
 - HtmlAgilityPack (![GitHub](https://github.com/zzzprojects/html-agility-pack), ![Website](http://html-agility-pack.net/), ![NuGet](https://www.nuget.org/packages/HtmlAgilityPack/))
+- Costura (![GitHub](https://github.com/Fody/Costura))
 - Icons made by ![Icons8](icons8.com)
