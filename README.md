@@ -1,5 +1,5 @@
 # Spotify Lyrics .NET
-![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/v-0.3.0-blue.svg?style=flat)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.3.0-blue.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v0.2.3-red.svg?style=flat)
 > Get the lyrics of the song you're listening to on Spotify
 
 ![](/Screenshots/SpotifyLyricsNET-v0.3.0.png)
