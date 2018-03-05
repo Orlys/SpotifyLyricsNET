@@ -23,7 +23,7 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 
 >v0.3.0:
 >- New improved UI
->- Project converted to WPF
+>- Project converted to WPF<br>
 >*(currently the source for this version is available only in VB.NET)*
 
 >v0.2.3:
