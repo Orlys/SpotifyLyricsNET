@@ -23,8 +23,7 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 
 >v0.4.0-beta:
 >- Improved UI
->- Fixed a few bugs and glitches
->- ...in development...<br>
+>- Fixed a few bugs and glitches<br>
 >*(currently the source for this version is available only in VB.NET)*
 
 >v0.3.0:
