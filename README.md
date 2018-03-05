@@ -21,17 +21,17 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 
 # Changelog
 
->v0.4.0-beta:
+>v0.4.0-beta (06/03/2018):
 >- Improved UI
 >- Fixed a few bugs and glitches<br>
 >*(currently the source for this version is available only in VB.NET)*
 
->v0.3.0:
+>v0.3.0 (05/03/2018):
 >- New improved UI
 >- Project converted to WPF<br>
 >*(the source for this version is available only in VB.NET)*
 
->v0.2.3:
+>v0.2.3 (02/03/2018):
 >- Added support for themes: light, dark
 >- Improved and fixed UI
 >- The window position and size are now saved and restored at launch
@@ -39,7 +39,7 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 >- Fixed lyrics formatting
 >- Fixed song title parser
 
->v0.1.0:
+>v0.1.0 (01/03/2018):
 >- First public version
 >- Find the song title and author of the current playing song on Spotify
 >- Search and get the lyrics from Musixmatch
