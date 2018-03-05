@@ -1,5 +1,5 @@
 # Spotify Lyrics .NET
-![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.3.0-blue.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v0.2.3-red.svg?style=flat)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.3.0_(&%20v0.4.0--beta)-blue.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v0.2.3-red.svg?style=flat)
 > Get the lyrics of the song you're listening to on Spotify
 
 ![](/Screenshots/SpotifyLyricsNET-v0.3.0.png)
@@ -21,10 +21,16 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 
 # Changelog
 
+>v0.4.0-beta:
+>- Improved UI
+>- Fixed a few bugs and glitches
+>- ...in development...
+>*(currently the source for this version is available only in VB.NET)*
+
 >v0.3.0:
 >- New improved UI
 >- Project converted to WPF<br>
->*(currently the source for this version is available only in VB.NET)*
+>*(the source for this version is available only in VB.NET)*
 
 >v0.2.3:
 >- Added support for themes: light, dark

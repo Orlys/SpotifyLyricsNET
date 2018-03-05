@@ -1,0 +1,20 @@
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\Spotify_Lyrics.NET.exe.config
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\Spotify_Lyrics.NET.exe
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\Spotify_Lyrics.NET.pdb
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\Spotify_Lyrics.NET.xml
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\HtmlAgilityPack.dll
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\HtmlAgilityPack.pdb
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\HtmlAgilityPack.xml
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\MainWindow.g.vb
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Application.g.vb
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET_MarkupCompile.cache
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET_MarkupCompile.lref
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\MainWindow.baml
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET.g.resources
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET.Resources.resources
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify Lyrics .NET.vbproj.GenerateResource.Cache
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify Lyrics .NET.vbproj.CoreCompileInputs.cache
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET.exe
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET.xml
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET.pdb
+C:\Users\jakub\Source\Repos\JSprojects\Other\Spotify Lyrics .NET\Source\VB.NET - WPF\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify Lyrics .NET.vbprojResolveAssemblyReference.cache
