@@ -24,12 +24,12 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 >v0.4.0-beta (06/03/2018):
 >- Improved UI
 >- Fixed a few bugs and glitches<br>
->*(currently the source for this version is available only in VB.NET)*
+>*(currently the source of this version is available only in VB.NET)*
 
 >v0.3.0 (05/03/2018):
 >- New improved UI
 >- Project converted to WPF<br>
->*(the source for this version is available only in VB.NET)*
+>*(the source of this version is available only in VB.NET)*
 
 >v0.2.3 (02/03/2018):
 >- Added support for themes: light, dark
