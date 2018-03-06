@@ -5,7 +5,7 @@ Imports System.Windows.Threading
 Imports HtmlAgilityPack
 
 Class MainWindow
-    Const appVERSION As String = "v0.4.0-beta"
+    Const appVERSION As String = "v0.5.0-beta"
     Const appBUILD As String = "06.03.2018"
     Const appAuthor As String = "Jakub Stęplowski"
     Const appAuthorWebsite As String = "https://jakubsteplowski.com"
@@ -164,6 +164,7 @@ Class MainWindow
     Private Sub clearLyricsView()
         lyricsView.Items.Clear()
         lyricsView.UpdateLayout()
+        CType(lyricsView.Parent, ScrollViewer).ScrollToTop()
     End Sub
 
     Private Sub addToLyricsView(ByVal s As String)
@@ -253,10 +254,19 @@ Class MainWindow
 
             setLyrics(0)
         Else
-            clearLyricsView()
-            addToLyricsView("I can't find the lyrics, sorry. :(")
-            setBtnStatus(False)
-            countLabel.Text = "0 of 0"
+            'Try to remove useless strings from the song (e.g. "- Radio Edit", " - (Original Mix)") and search it again
+            If song.Contains("-") Then
+                song = song.Substring(0, song.IndexOf("-")).Trim
+                getLyrics(artist, song)
+            ElseIf song.Contains("(") Then
+                song = song.Substring(0, song.IndexOf("(")).Trim
+                getLyrics(artist, song)
+            Else
+                clearLyricsView()
+                addToLyricsView("I can't find the lyrics, sorry. :(")
+                setBtnStatus(False)
+                countLabel.Text = "0 of 0"
+            End If
         End If
     End Sub
 
@@ -286,6 +296,16 @@ Class MainWindow
             Else
                 clearLyricsView()
                 addToLyricsView("I can't find the lyrics, sorry. :(")
+
+                'Remove this lyrics and search the next one
+                lyricsURLs.RemoveAt(indx)
+                If lyricsURLs.Count > indx Then
+                    setLyrics(indx)
+                    countLabel.Text = indx & " of " & lyricsURLs.Count
+                Else
+                    setBtnStatus(False)
+                    countLabel.Text = "0 of 0"
+                End If
             End If
         Catch ex As Exception
         End Try
