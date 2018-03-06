@@ -286,8 +286,6 @@ Class MainWindow
             Else
                 clearLyricsView()
                 addToLyricsView("I can't find the lyrics, sorry. :(")
-                setBtnStatus(False)
-                countLabel.Text = "0 of 0"
             End If
         Catch ex As Exception
         End Try
