@@ -24,7 +24,7 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 >v0.5.0-beta (06/03/2018):
 >- Improved UI
 >- Improved search of lyrics
->- Added filter of missing lyrics
+>- Added filter of missing lyrics<br>
 >*(currently the source of this version is available only in VB.NET)*
 
 >v0.4.0-beta (06/03/2018):
