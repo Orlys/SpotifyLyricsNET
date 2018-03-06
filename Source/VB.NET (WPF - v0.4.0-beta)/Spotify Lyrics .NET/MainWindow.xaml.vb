@@ -245,12 +245,13 @@ Class MainWindow
 
         'Display the first result if found
         If lyricsURLs.Count > 0 Then
-            setLyrics(0)
             If lyricsURLs.Count > 1 Then
                 setBtnStatus(True)
             Else
                 setBtnStatus(False)
             End If
+
+            setLyrics(0)
         Else
             clearLyricsView()
             addToLyricsView("I can't find the lyrics, sorry. :(")
