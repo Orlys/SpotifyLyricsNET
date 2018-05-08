@@ -1,8 +1,8 @@
 # Spotify Lyrics .NET
-![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.3.0_(&%20v0.6.0--beta)-blue.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v0.2.3-red.svg?style=flat)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.6.0-blue.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v0.2.3-red.svg?style=flat)
 > Get the lyrics of the song you're listening to on Spotify
 
-![](/Screenshots/SpotifyLyricsNET-v0.3.0.png)
+![](/Screenshots/SpotifyLyricsNET-v0.6.0.png)
 
 # Requirements
 ## To use the software:
@@ -10,7 +10,7 @@
 - Spotify
 - Internet Connection
 
-> The software has been tested only with **Spotify 1.0.75.483.g7ff4a0dc**.<br>I can't guarantee that it works with other versions.
+> The software has been tested only with **Spotify 1.0.80.474.gef6b503e**.<br>I can't guarantee that it works with other versions.
 
 Download the latest version from the ![Releases](https://github.com/JakubSteplowski/SpotifyLyricsNET/releases) section.
 
@@ -21,21 +21,11 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 
 # Changelog
 
->v0.6.0-beta (07/05/2018):
->- Fixed prev and next buttons
->- Removed the part that removes a source if the lyrics are not available, because it caused a lot of problems
->- Added automerging of .dll with the WPF assembly<br>
->*(the source of this version is available only in VB.NET)*
-
->v0.5.0-beta (06/03/2018):
+>v0.6.0 (08/05/2018):
 >- Improved UI
 >- Improved search of lyrics
->- Added filter of missing lyrics<br>
->*(the source of this version is available only in VB.NET)*
-
->v0.4.0-beta (06/03/2018):
->- Improved UI
->- Fixed a few bugs and glitches<br>
+>- Fixed a few bugs and glitches
+>- Added automerging of .dll with the WPF assembly<br>
 >*(the source of this version is available only in VB.NET)*
 
 >v0.3.0 (05/03/2018):
