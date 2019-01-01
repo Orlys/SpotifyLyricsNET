@@ -307,10 +307,9 @@ namespace Spotify_Lyrics.NET
 
                 setLyrics(0);
             }
-            else
-                // Try to remove useless strings from the song (e.g. "- Radio Edit", " - (Original Mix)") and search it again
-                if (song.Contains("-"))
+            else if (song.Contains("-"))
             {
+                // Try to remove useless strings from the song (e.g. "- Radio Edit", " - (Original Mix)") and search it again
                 song = song.Substring(0, song.IndexOf("-")).Trim();
                 getLyrics(artist, song);
             }
@@ -349,9 +348,7 @@ namespace Spotify_Lyrics.NET
                         if (p.HasClass("mxm-lyrics__content"))
                             lyricsText += p.InnerText + Environment.NewLine;
                     }
-                    catch
-                    {
-                    }
+                    catch {}
                 }
 
                 if (lyricsText.Trim().Length > 0)
