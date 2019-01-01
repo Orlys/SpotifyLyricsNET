@@ -18,7 +18,7 @@ Download the latest version from the ![Releases](https://github.com/JakubSteplow
 ## To use the source:
 - Visual Studio 2017 (or newer)
 - .NET Framework 4.6.1 or newer
-- NuGet HtmlAgilityPack 1.7.1 package
+- NuGet HtmlAgilityPack 1.8.11 package
 
 # Changelog
 
