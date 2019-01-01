@@ -147,7 +147,7 @@
       </Grid>
 
       <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10">
-        <CheckBox x:Name="darkTheme" Content="Dark theme" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#8d8d8d" FontSize="11"/>
+        <CheckBox x:Name="darkTheme" Content="Dark theme" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#8d8d8d" FontSize="11"/>
       </Grid>
 
       <Grid Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10">
