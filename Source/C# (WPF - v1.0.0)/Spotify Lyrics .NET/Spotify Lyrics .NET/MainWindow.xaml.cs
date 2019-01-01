@@ -3,19 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace Spotify_Lyrics.NET
@@ -44,11 +35,14 @@ namespace Spotify_Lyrics.NET
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
-           
+            SizeChanged += MainWindow_SizeChanged;
+
             darkTheme.Checked += darkTheme_Checked;
             darkTheme.Unchecked += darkTheme_Unchecked;
             topmostCheck.Checked += topmostCheck_CheckedChanged;
             topmostCheck.Unchecked += topmostCheck_CheckedChanged;
+            prevBtn.Click += prevBtn_Click;
+            nextBtn.Click += nextBtn_Click;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -146,14 +140,14 @@ namespace Spotify_Lyrics.NET
             loadTheme(0);
         }
 
-        private void Form1_SizeChanged(object sender, EventArgs e)
+        private void MainWindow_SizeChanged(object sender, EventArgs e)
         {
             // Save window size
             if (settingsLoaded)
             {
-               Properties.Settings.Default.width = Convert.ToInt32(this.Width);
-               Properties.Settings.Default.height = Convert.ToInt32(this.Height);
-               Properties.Settings.Default.Save();
+                Properties.Settings.Default.width = Convert.ToInt32(this.Width);
+                Properties.Settings.Default.height = Convert.ToInt32(this.Height);
+                Properties.Settings.Default.Save();
 
                 foreach (ListViewItem s in lyricsView.Items)
                 {

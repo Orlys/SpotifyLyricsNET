@@ -16,3 +16,4 @@ D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyri
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify Lyrics .NET.csproj.CopyComplete
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET.exe
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET.pdb
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify Lyrics .NET.csprojAssemblyReference.cache

@@ -104,7 +104,7 @@
         </Grid>
 
         <Grid Grid.Row="1" HorizontalAlignment="Center">
-          <TextBlock x:Name="countLabel" Text="0 of 0" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#b3b3b3" FontSize="14" TextAlignment="Center"/>
+          <TextBlock x:Name="countLabel" Text="0 of 0" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#b3b3b3" FontSize="14" TextAlignment="Center" TextWrapping="Wrap"/>
         </Grid>
       </Grid>
     </Grid>
@@ -147,11 +147,11 @@
       </Grid>
 
       <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10">
-        <CheckBox x:Name="darkTheme" Content="Dark theme" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#8d8d8d" FontSize="11"/>
+        <CheckBox x:Name="darkTheme" Content="Dark theme" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#8d8d8d" FontSize="11"/>
       </Grid>
 
       <Grid Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10">
-        <CheckBox x:Name="topmostCheck" Content="Always on Top" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#8d8d8d" FontSize="11"/>
+        <CheckBox x:Name="topmostCheck" Content="Always on Top" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="/Spotify_Lyrics.NET;component/Resources/#Circular Book" Foreground="#8d8d8d" FontSize="11"/>
       </Grid>
     </Grid>
   </Grid>
