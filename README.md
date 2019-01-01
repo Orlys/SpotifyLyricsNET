@@ -1,5 +1,6 @@
+![](/Screenshots/SpotifyLyricsNET-logo-v1.png)
 # Spotify Lyrics .NET
-![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.6.0-blue.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v0.2.3-red.svg?style=flat)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.6.0-blue.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v1.0.0--alpha-red.svg?style=flat)
 > Get the lyrics of the song you're listening to on Spotify
 
 ![](/Screenshots/SpotifyLyricsNET-v0.6.0.png)
@@ -10,12 +11,12 @@
 - Spotify
 - Internet Connection
 
-> The software has been tested only with **Spotify 1.0.80.474.gef6b503e**.<br>I can't guarantee that it works with other versions.
+> The software has been most recently tested with **Spotify 1.0.96.181.gf6bc1b6b**.<br>I can't guarantee that it works with other versions.
 
 Download the latest version from the ![Releases](https://github.com/JakubSteplowski/SpotifyLyricsNET/releases) section.
 
 ## To use the source:
-- Visual Studio 2017
+- Visual Studio 2017 (or newer)
 - .NET Framework 4.6.1 or newer
 - NuGet HtmlAgilityPack 1.7.1 package
 
