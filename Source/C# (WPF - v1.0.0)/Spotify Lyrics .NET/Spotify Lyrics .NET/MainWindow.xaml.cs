@@ -28,6 +28,7 @@ namespace Spotify_Lyrics.NET
         private DispatcherTimer sTimer;
 
         private SolidColorBrush bgColor = new SolidColorBrush();
+        private SolidColorBrush bgColor2 = new SolidColorBrush();
         private SolidColorBrush textColor = new SolidColorBrush();
         private SolidColorBrush textColor2 = new SolidColorBrush();
 
@@ -88,6 +89,7 @@ namespace Spotify_Lyrics.NET
                :
                     {
                         bgColor = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                        bgColor2 = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                         textColor = new SolidColorBrush(Color.FromRgb(24, 24, 24));
                         textColor2 = new SolidColorBrush(Color.FromRgb(10, 10, 10));
                         break;
@@ -97,6 +99,7 @@ namespace Spotify_Lyrics.NET
          :
                     {
                         bgColor = new SolidColorBrush(Color.FromRgb(24, 24, 24));
+                        bgColor2 = new SolidColorBrush(Color.FromRgb(61, 61, 61));
                         textColor = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                         textColor2 = new SolidColorBrush(Color.FromRgb(179, 179, 179));
                         break;
@@ -106,7 +109,6 @@ namespace Spotify_Lyrics.NET
             // Set colors
             mainGrid.Background = bgColor;
             menuGrid.Background = bgColor;
-            headerGrid.Background = bgColor;
             bodyGrid.Background = bgColor;
             footerGrid.Background = bgColor;
             songTitleLabel.Foreground = textColor;
@@ -119,6 +121,8 @@ namespace Spotify_Lyrics.NET
             gradient1.Color = Color.FromArgb(0, bgColor.Color.R, bgColor.Color.G, bgColor.Color.B);
             gradient2.Color = Color.FromArgb(0, bgColor.Color.R, bgColor.Color.G, bgColor.Color.B);
             gradient3.Color = bgColor.Color;
+            gradient4.Color = bgColor2.Color;
+            gradient5.Color = bgColor.Color;
 
             foreach (ListViewItem s in lyricsView.Items)
             {

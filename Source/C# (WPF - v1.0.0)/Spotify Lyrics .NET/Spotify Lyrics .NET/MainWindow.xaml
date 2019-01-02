@@ -63,9 +63,6 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Titlebar -->
-        <!--<Grid x:Name="titlebarGrid" Grid.Row="0" Background="#000"></Grid>-->
-
         <!-- Menu -->
         <Grid x:Name="menuGrid" Grid.Row="1" Background="#282828" Height="30" Visibility="Collapsed">
             <Menu Background="Transparent" Style="{DynamicResource BookFont}" Foreground="#8d8d8d">
@@ -75,8 +72,18 @@
             </Menu>
         </Grid>
 
+        <!-- Titlebar -->
+        <Grid x:Name="titlebarGrid" Grid.Row="2">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,-0.5">
+                    <GradientStop x:Name="gradient4" Color="#FF3d3d3d"/>
+                    <GradientStop x:Name="gradient5" Color="#FF181818" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+        </Grid>
+
         <!-- Header -->
-        <Grid x:Name="headerGrid" Grid.Row="2" Background="#181818">
+        <Grid x:Name="headerGrid" Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="auto"/>
