@@ -98,11 +98,21 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Resources\circular-pro-bold.ttf" />
-    <None Include="Resources\circular-pro-book.ttf" />
-    <None Include="Resources\circular-pro-bookItalic.ttf" />
-    <None Include="Resources\circular-pro-medium.ttf" />
-    <None Include="Resources\circular-pro-mediumItalic.ttf" />
+    <Resource Include="Resources\circular-pro-bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\circular-pro-book.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\circular-pro-bookItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\circular-pro-medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\circular-pro-mediumItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

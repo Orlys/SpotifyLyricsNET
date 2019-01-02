@@ -36,6 +36,7 @@ namespace Spotify_Lyrics.NET
             InitializeComponent();
             Loaded += MainWindow_Loaded;
             SizeChanged += MainWindow_SizeChanged;
+            LocationChanged += MainView_LocationChanged;
 
             darkTheme.Checked += darkTheme_Checked;
             darkTheme.Unchecked += darkTheme_Unchecked;
@@ -43,6 +44,7 @@ namespace Spotify_Lyrics.NET
             topmostCheck.Unchecked += topmostCheck_CheckedChanged;
             prevBtn.Click += prevBtn_Click;
             nextBtn.Click += nextBtn_Click;
+            lyricsView.PreviewMouseWheel += ListViewScrollViewer_PreviewMouseWheel;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -51,21 +53,21 @@ namespace Spotify_Lyrics.NET
 
             // Load Settings
             loadTheme(Properties.Settings.Default.theme);
-            topmostCheck.IsChecked =Properties.Settings.Default.topMost;
+            topmostCheck.IsChecked = Properties.Settings.Default.topMost;
             if (Properties.Settings.Default.theme == 1)
                 darkTheme.IsChecked = true;
             this.Topmost = Properties.Settings.Default.topMost;
             if (Properties.Settings.Default.width > 0)
             {
-                this.Width =Properties.Settings.Default.width;
-                this.Height =Properties.Settings.Default.height;
+                this.Width = Properties.Settings.Default.width;
+                this.Height = Properties.Settings.Default.height;
             }
             if (Properties.Settings.Default.xPos > 0)
             {
-                this.Left =Properties.Settings.Default.xPos;
-                this.Top =Properties.Settings.Default.yPos;
+                this.Left = Properties.Settings.Default.xPos;
+                this.Top = Properties.Settings.Default.yPos;
             }
-            this.Opacity =Properties.Settings.Default.opacity;
+            this.Opacity = Properties.Settings.Default.opacity;
             settingsLoaded = true;
 
             // Start Timer
@@ -126,8 +128,8 @@ namespace Spotify_Lyrics.NET
             }
 
             // Save settings
-           Properties.Settings.Default.theme = themeID;
-           Properties.Settings.Default.Save();
+            Properties.Settings.Default.theme = themeID;
+            Properties.Settings.Default.Save();
         }
 
         private void darkTheme_Checked(object sender, RoutedEventArgs e)
@@ -157,14 +159,14 @@ namespace Spotify_Lyrics.NET
             }
         }
 
-        private void Form1_LocationChanged(object sender, EventArgs e)
+        private void MainView_LocationChanged(object sender, EventArgs e)
         {
             // Save window position
             if (settingsLoaded)
             {
-               Properties.Settings.Default.xPos = Convert.ToInt32(this.Left);
-               Properties.Settings.Default.yPos = Convert.ToInt32(this.Top);
-               Properties.Settings.Default.Save();
+                Properties.Settings.Default.xPos = Convert.ToInt32(this.Left);
+                Properties.Settings.Default.yPos = Convert.ToInt32(this.Top);
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -179,9 +181,9 @@ namespace Spotify_Lyrics.NET
             // Save top most status
             if (settingsLoaded)
             {
-               this.Topmost = (bool)topmostCheck.IsChecked;
-               Properties.Settings.Default.topMost = (bool)topmostCheck.IsChecked;
-               Properties.Settings.Default.Save();
+                this.Topmost = (bool)topmostCheck.IsChecked;
+                Properties.Settings.Default.topMost = (bool)topmostCheck.IsChecked;
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -223,7 +225,7 @@ namespace Spotify_Lyrics.NET
             TextBlock lString = new TextBlock();
             lString.FontFamily = new FontFamily("/Spotify_Lyrics.NET;component/Resources/#Circular Book");
             lString.Foreground = textColor;
-            lString.FontSize =Properties.Settings.Default.textSize;
+            lString.FontSize = Properties.Settings.Default.textSize;
             lString.TextAlignment = TextAlignment.Center;
             lString.Text = s;
             lString.TextWrapping = TextWrapping.WrapWithOverflow;
@@ -348,7 +350,7 @@ namespace Spotify_Lyrics.NET
                         if (p.HasClass("mxm-lyrics__content"))
                             lyricsText += p.InnerText + Environment.NewLine;
                     }
-                    catch {}
+                    catch { }
                 }
 
                 if (lyricsText.Trim().Length > 0)
