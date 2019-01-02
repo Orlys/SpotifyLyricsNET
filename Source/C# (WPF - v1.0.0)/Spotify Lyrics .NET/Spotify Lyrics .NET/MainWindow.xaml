@@ -51,6 +51,8 @@
 
     <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
+            <!-- Titlebar -->
+            <RowDefinition Height="0"/> <!-- 30 -->
             <!-- Menu -->
             <RowDefinition Height="auto"/>
             <!-- Header -->
@@ -61,8 +63,11 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
+        <!-- Titlebar -->
+        <!--<Grid x:Name="titlebarGrid" Grid.Row="0" Background="#000"></Grid>-->
+
         <!-- Menu -->
-        <Grid x:Name="menuGrid" Grid.Row="0" Background="#282828" Height="30" Visibility="Collapsed">
+        <Grid x:Name="menuGrid" Grid.Row="1" Background="#282828" Height="30" Visibility="Collapsed">
             <Menu Background="Transparent" Style="{DynamicResource BookFont}" Foreground="#8d8d8d">
                 <MenuItem Height="30" Header="File"></MenuItem>
                 <MenuItem Height="30" Header="Edit"></MenuItem>
@@ -71,7 +76,7 @@
         </Grid>
 
         <!-- Header -->
-        <Grid x:Name="headerGrid" Grid.Row="1" Background="#181818">
+        <Grid x:Name="headerGrid" Grid.Row="2" Background="#181818">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="auto"/>
@@ -119,7 +124,7 @@
         </Grid>
 
         <!-- Body -->
-        <Grid x:Name="bodyGrid" Grid.Row="2" Background="#181818">
+        <Grid x:Name="bodyGrid" Grid.Row="3" Background="#181818">
             <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">
                 <ListView Padding="0,20" x:Name="lyricsView" Background="Transparent" BorderThickness="0"/>
             </ScrollViewer>
@@ -144,7 +149,7 @@
         </Grid>
 
         <!-- Footer -->
-        <Grid x:Name="footerGrid" Grid.Row="3" Background="#181818">
+        <Grid x:Name="footerGrid" Grid.Row="4" Background="#181818">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="auto"/>
