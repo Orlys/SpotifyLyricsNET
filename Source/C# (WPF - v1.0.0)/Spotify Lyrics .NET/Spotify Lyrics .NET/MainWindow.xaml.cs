@@ -17,7 +17,7 @@ namespace Spotify_Lyrics.NET
     public partial class MainWindow : Window
     {
         const string appVERSION = "v1.0.0-alpha";
-        const string appBUILD = "01.01.2019";
+        const string appBUILD = "09.04.2019";
         const string appAuthor = "Jakub Stęplowski";
         const string appAuthorWebsite = "https://jakubsteplowski.com";
 
@@ -54,10 +54,10 @@ namespace Spotify_Lyrics.NET
 
             // Load Settings
             loadTheme(Properties.Settings.Default.theme);
+            this.Topmost = Properties.Settings.Default.topMost;
             topmostCheck.IsChecked = Properties.Settings.Default.topMost;
             if (Properties.Settings.Default.theme == 1)
                 darkTheme.IsChecked = true;
-            this.Topmost = Properties.Settings.Default.topMost;
             if (Properties.Settings.Default.width > 0)
             {
                 this.Width = Properties.Settings.Default.width;
@@ -134,6 +134,17 @@ namespace Spotify_Lyrics.NET
             // Save settings
             Properties.Settings.Default.theme = themeID;
             Properties.Settings.Default.Save();
+        }
+
+        // Offline lyrics
+        private void checkOfflineDir()
+        {
+            var offlinePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\SpotifyLyrics.NET\\Offline\\Lyrics\\";
+
+            if (!Directory.Exists(offlinePath))
+            {
+                Directory.CreateDirectory(offlinePath);
+            }
         }
 
         private void darkTheme_Checked(object sender, RoutedEventArgs e)
