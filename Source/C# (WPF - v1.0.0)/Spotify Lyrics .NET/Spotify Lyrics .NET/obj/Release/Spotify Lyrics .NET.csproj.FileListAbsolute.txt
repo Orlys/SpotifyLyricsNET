@@ -1,8 +1,6 @@
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\Spotify_Lyrics.NET.exe.config
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\Spotify_Lyrics.NET.exe
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\Spotify_Lyrics.NET.pdb
-D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\HtmlAgilityPack.dll
-D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\HtmlAgilityPack.pdb
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\HtmlAgilityPack.xml
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\MainWindow.g.cs
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\App.g.cs
@@ -17,3 +15,6 @@ D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyri
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET.exe
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify_Lyrics.NET.pdb
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify Lyrics .NET.csprojAssemblyReference.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\Genius.xml
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\Release\Newtonsoft.Json.xml
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.0.0)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\Release\Spotify Lyrics .NET.csproj.Fody.CopyLocal.cache

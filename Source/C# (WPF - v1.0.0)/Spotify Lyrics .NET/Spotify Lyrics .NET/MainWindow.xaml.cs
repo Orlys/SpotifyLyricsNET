@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Threading;
+using Spotify_Lyrics.NET.API;
 
 namespace Spotify_Lyrics.NET
 {
@@ -16,21 +17,35 @@ namespace Spotify_Lyrics.NET
     /// </summary>
     public partial class MainWindow : Window
     {
-        const string appVERSION = "v1.0.0-alpha";
-        const string appBUILD = "09.04.2019";
+        const string appVERSION = "v1.0.0";
+        const string appBUILD = "08.07.2019";
         const string appAuthor = "Jakub Stęplowski";
         const string appAuthorWebsite = "https://jakubsteplowski.com";
 
+        public struct lyricsURL
+        {
+            public string title;
+            public string artist;
+            public string img;
+            public string url;
+            public string source;
+        }
+
         private string currentSongTitle = "";
         private int currentLyricsIndx = -1;
-        private List<string> lyricsURLs = new List<string>();
+        public List<lyricsURL> lyricsURLs = new List<lyricsURL>();
         private bool settingsLoaded = false;
         private DispatcherTimer sTimer;
+        public string lyricsText = "";
+        private bool isDownloading = false;
 
         private SolidColorBrush bgColor = new SolidColorBrush();
         private SolidColorBrush bgColor2 = new SolidColorBrush();
         private SolidColorBrush textColor = new SolidColorBrush();
         private SolidColorBrush textColor2 = new SolidColorBrush();
+
+        private MusixmatchAPI mmAPI = new MusixmatchAPI();
+        private GeniusAPI geniusAPI;
 
         public MainWindow()
         {
@@ -46,6 +61,9 @@ namespace Spotify_Lyrics.NET
             prevBtn.Click += prevBtn_Click;
             nextBtn.Click += nextBtn_Click;
             lyricsView.PreviewMouseWheel += ListViewScrollViewer_PreviewMouseWheel;
+
+            var me = this;
+            geniusAPI = new GeniusAPI(ref me);
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -204,22 +222,28 @@ namespace Spotify_Lyrics.NET
 
         private void nextBtn_Click(object sender, EventArgs e)
         {
-            clearLyricsView();
-            addToLyricsView("Loading...");
-            if (currentLyricsIndx + 1 >= lyricsURLs.Count)
-                setLyrics(0);
-            else
-                setLyrics(currentLyricsIndx + 1);
+            if (!isDownloading)
+            {
+                clearLyricsView();
+                addToLyricsView("Loading...");
+                if (currentLyricsIndx + 1 >= lyricsURLs.Count)
+                    setLyrics(0);
+                else
+                    setLyrics(currentLyricsIndx + 1);
+            }
         }
 
         private void prevBtn_Click(object sender, EventArgs e)
         {
-            clearLyricsView();
-            addToLyricsView("Loading...");
-            if (currentLyricsIndx - 1 < 0)
-                setLyrics(lyricsURLs.Count - 1);
-            else
-                setLyrics(currentLyricsIndx - 1);
+            if (!isDownloading)
+            {
+                clearLyricsView();
+                addToLyricsView("Loading...");
+                if (currentLyricsIndx - 1 < 0)
+                    setLyrics(lyricsURLs.Count - 1);
+                else
+                    setLyrics(currentLyricsIndx - 1);
+            }
         }
 
         private void clearLyricsView()
@@ -285,34 +309,18 @@ namespace Spotify_Lyrics.NET
             }
         }
 
-        private void getLyrics(string artist, string song)
+        private async void getLyrics(string artist, string song)
         {
             clearLyricsView();
             addToLyricsView("Searching...");
 
+            lyricsURLs = new List<lyricsURL>();
+
             // Search the song on Musixmatch
-            string searchURL = "https://www.musixmatch.com/search/" + Uri.EscapeDataString(artist) + "-" + Uri.EscapeDataString(song) + "/tracks";
-            string response = getHTTPSRequest(searchURL);
-            response = response.Replace("\"", "'");
+            mmAPI.getLyrics(artist, song, ref lyricsURLs);
 
-            // Save all the valid search results
-            lyricsURLs = new List<String>();
-            while (response.Contains("href='/lyrics/"))
-            {
-                try
-                {
-                    int a = response.IndexOf("href='/lyrics/");
-                    int b = response.IndexOf("'>", a);
-                    string link = response.Substring(a, b - a).Replace("href='", "");
-
-                    lyricsURLs.Add("https://www.musixmatch.com" + link);
-                    response = response.Substring(b, response.Length - b);
-                }
-                catch (Exception ex)
-                {
-                    break;
-                }
-            }
+            // Search the song on Genius
+            await geniusAPI.getLyrics(artist, song);
 
             // Display the first result if found
             if (lyricsURLs.Count > 0)
@@ -344,40 +352,55 @@ namespace Spotify_Lyrics.NET
             }
         }
 
-        public void setLyrics(int indx)
+        public async void setLyrics(int indx)
         {
-            try
+            if (!isDownloading)
             {
-                currentLyricsIndx = indx;
-                countLabel.Text = (indx + 1) + " of " + lyricsURLs.Count;
+                setBtnStatus(false);
+                isDownloading = true;
 
-                string responseLyrics = getHTTPSRequest(WebUtility.HtmlEncode(lyricsURLs[indx]));
-                HtmlAgilityPack.HtmlDocument lyricsDoc = new HtmlAgilityPack.HtmlDocument();
-                lyricsDoc.LoadHtml(responseLyrics);
-
-                var nodes = lyricsDoc.DocumentNode.SelectNodes("//p");
-                clearLyricsView();
-                string lyricsText = "";
-                foreach (HtmlNode p in nodes)
+                try
                 {
-                    try
-                    {
-                        if (p.HasClass("mxm-lyrics__content"))
-                            lyricsText += p.InnerText + Environment.NewLine;
-                    }
-                    catch { }
-                }
+                    currentLyricsIndx = indx;
+                    countLabel.Text = (indx + 1) + " of " + lyricsURLs.Count;
 
-                if (lyricsText.Trim().Length > 0)
-                    addToLyricsView(lyricsText);
-                else
+                    clearLyricsView();
+
+                    lyricsText = "";
+
+                    addToLyricsView("Downloading...");
+                    sourceLabel.Text = "Lyrics from " + lyricsURLs[indx].source;
+
+                    switch (lyricsURLs[indx].source)
+                    {
+                        case "Musixmatch":
+                            lyricsText = mmAPI.setLyrics(indx, ref lyricsURLs);
+                            break;
+                        case "Genius":
+                            await geniusAPI.setLyrics(indx);
+                            break;
+                    }
+
+
+                    if (lyricsText.Trim().Length > 0)
+                    {
+                        clearLyricsView();
+                        addToLyricsView(lyricsText);
+                    }
+                    else
+                    {
+                        clearLyricsView();
+                        addToLyricsView("I can't find the lyrics, sorry. :(");
+                    }
+                }
+                catch (Exception ex)
                 {
                     clearLyricsView();
                     addToLyricsView("I can't find the lyrics, sorry. :(");
                 }
-            }
-            catch (Exception ex)
-            {
+
+                isDownloading = false;
+                setBtnStatus(true);
             }
         }
 

@@ -93,6 +93,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Margin="0,0,0,0">
@@ -101,6 +102,10 @@
 
                 <Grid Grid.Row="1">
                     <TextBlock x:Name="artistLabel" Text="Jakub Stęplowski" Style="{DynamicResource BookFont}" Foreground="#b3b3b3" FontSize="14"/>
+                </Grid>
+
+                <Grid Grid.Row="2" Margin="0,5,0,0">
+                    <TextBlock x:Name="sourceLabel" Text="" Style="{DynamicResource BookFont}" Foreground="Gray" FontSize="12"/>
                 </Grid>
             </Grid>
 
