@@ -85,11 +85,16 @@
         <!-- Header -->
         <Grid x:Name="headerGrid" Grid.Row="2">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0" VerticalAlignment="Center" Margin="20,0">
+            <Grid Grid.Column="0">
+                <Image x:Name="coverImage" Width="65" Height="65" Margin="20,0,0,0" Visibility="Collapsed"/>
+            </Grid>
+            
+            <Grid Grid.Column="1" VerticalAlignment="Center" Margin="20,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
@@ -109,7 +114,7 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Column="1" Margin="20,0" VerticalAlignment="Center">
+            <Grid Grid.Column="2" Margin="20,0" VerticalAlignment="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>

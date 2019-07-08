@@ -9,6 +9,8 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Threading;
 using Spotify_Lyrics.NET.API;
+using System.Windows.Media.Imaging;
+using System.Threading.Tasks;
 
 namespace Spotify_Lyrics.NET
 {
@@ -17,7 +19,7 @@ namespace Spotify_Lyrics.NET
     /// </summary>
     public partial class MainWindow : Window
     {
-        const string appVERSION = "v1.0.0";
+        const string appVERSION = "v1.1.0-alpha";
         const string appBUILD = "08.07.2019";
         const string appAuthor = "Jakub Stęplowski";
         const string appAuthorWebsite = "https://jakubsteplowski.com";
@@ -37,6 +39,7 @@ namespace Spotify_Lyrics.NET
         private bool settingsLoaded = false;
         private DispatcherTimer sTimer;
         public string lyricsText = "";
+        public string lyricsTextTemp = "";
         private bool isDownloading = false;
 
         private SolidColorBrush bgColor = new SolidColorBrush();
@@ -323,13 +326,15 @@ namespace Spotify_Lyrics.NET
             await geniusAPI.getLyrics(artist, song);
 
             // Display the first result if found
+            await checkLyrics(3);
+
             if (lyricsURLs.Count > 0)
             {
                 if (lyricsURLs.Count > 1)
                     setBtnStatus(true);
                 else
                     setBtnStatus(false);
-
+                
                 setLyrics(0);
             }
             else if (song.Contains("-"))
@@ -349,6 +354,43 @@ namespace Spotify_Lyrics.NET
                 addToLyricsView("I can't find the lyrics, sorry. :(");
                 setBtnStatus(false);
                 countLabel.Text = "0 of 0";
+            }
+        }
+
+        public async Task checkLyrics(int count)
+        {
+            clearLyricsView();
+            addToLyricsView("Checking...");
+
+            if (count > lyricsURLs.Count)
+            {
+                count = lyricsURLs.Count;
+            }
+
+            List<lyricsURL> toRemove = new List<lyricsURL>();
+            for (int indx = 0; indx < count; indx++)
+            {
+                lyricsTextTemp = "";
+
+                switch (lyricsURLs[indx].source)
+                {
+                    case "Musixmatch":
+                        lyricsTextTemp = mmAPI.setLyrics(indx, ref lyricsURLs);
+                        break;
+                    case "Genius":
+                        await geniusAPI.setLyrics(indx, true);
+                        break;
+                }
+
+                if (lyricsText.Trim().Length == 0)
+                {
+                    toRemove.Add(lyricsURLs[indx]);
+                }
+            }
+
+            foreach (lyricsURL ly in toRemove)
+            {
+                lyricsURLs.Remove(ly);
             }
         }
 
@@ -375,9 +417,23 @@ namespace Spotify_Lyrics.NET
                     {
                         case "Musixmatch":
                             lyricsText = mmAPI.setLyrics(indx, ref lyricsURLs);
+                            coverImage.Visibility = Visibility.Collapsed;
                             break;
                         case "Genius":
                             await geniusAPI.setLyrics(indx);
+                            if (lyricsURLs[indx].img != "")
+                            {
+                                BitmapImage cover = new BitmapImage();
+                                cover.BeginInit();
+                                cover.UriSource = new Uri(lyricsURLs[indx].img);
+                                cover.EndInit();
+                                coverImage.Source = cover;
+                                coverImage.Visibility = Visibility.Visible;
+                            }
+                            else if (coverImage.Visibility == Visibility.Visible)
+                            {
+                                coverImage.Visibility = Visibility.Collapsed;
+                            }
                             break;
                     }
 

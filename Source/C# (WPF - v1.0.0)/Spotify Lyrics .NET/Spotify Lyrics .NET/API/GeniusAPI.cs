@@ -34,6 +34,7 @@ namespace Spotify_Lyrics.NET.API
                 Hit h = searchResult.Response[r];
                 string[] hContent = h.Result.ToString().Replace('"', '\'').Split('\n');
 
+                var coverImg = "";
                 for (var x = 0; x < hContent.Count(); x++)
                 {
                     var ln = hContent[x];
@@ -42,13 +43,19 @@ namespace Spotify_Lyrics.NET.API
                         MainWindow.lyricsURL lyricsObj = new MainWindow.lyricsURL();
                         lyricsObj.url = ln.Replace("  'id': ", "").Replace(",\r", "");
                         lyricsObj.source = "Genius";
+                        lyricsObj.img = coverImg;
                         mainW.lyricsURLs.Add(lyricsObj);
+                        break;
+                    }
+                    else if (ln.Contains("'header_image_thumbnail_url':"))
+                    {
+                        coverImg = ln.Replace("  'header_image_thumbnail_url': '", "").Replace("',\r", "");
                     }
                 }
             }
         }
 
-        public async Task setLyrics(int indx)
+        public async Task setLyrics(int indx, bool test = false)
         {
             string lyricsText = "";
 
@@ -72,7 +79,15 @@ namespace Spotify_Lyrics.NET.API
                     }
                 }
             }
-            mainW.lyricsText = lyricsText;
+
+            if (!test)
+            {
+                mainW.lyricsText = lyricsText;
+            }
+            else
+            {
+                mainW.lyricsTextTemp = lyricsText;
+            }
         }
 
         private static string getHTTPSRequest(string strRequest)
