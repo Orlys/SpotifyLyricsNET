@@ -41,7 +41,7 @@ namespace Spotify_Lyrics.NET.API
             }
         }
 
-        public string setLyrics(int indx, ref List<MainWindow.lyricsURL> lyricsURLs)
+        public string setLyrics(int indx, ref List<MainWindow.lyricsURL> lyricsURLs, ref string coverImg)
         {
             string responseLyrics = getHTTPSRequest(WebUtility.HtmlEncode(lyricsURLs[indx].url));
             HtmlAgilityPack.HtmlDocument lyricsDoc = new HtmlAgilityPack.HtmlDocument();
@@ -58,6 +58,21 @@ namespace Spotify_Lyrics.NET.API
                 }
                 catch { }
             }
+            nodes = lyricsDoc.DocumentNode.SelectNodes("//img");
+            foreach (HtmlNode img in nodes)
+            {
+                try
+                {
+                    if (img.OuterHtml.Contains("images-storage/albums"))
+                    {
+                        coverImg = img.OuterHtml.Replace("<img src=\"", "").Replace("//", "");
+                        coverImg = "http://" + coverImg.Substring(0, coverImg.IndexOf("\""));
+                        break;
+                    }
+                }
+                catch (Exception ex) { break;  }
+            }
+
             return lyricsText;
         }
 

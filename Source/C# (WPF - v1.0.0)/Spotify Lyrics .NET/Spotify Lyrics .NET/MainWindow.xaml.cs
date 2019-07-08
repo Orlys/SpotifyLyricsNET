@@ -315,6 +315,8 @@ namespace Spotify_Lyrics.NET
         private async void getLyrics(string artist, string song)
         {
             clearLyricsView();
+            coverImage.Visibility = Visibility.Collapsed;
+            sourceLabel.Text = "";
             addToLyricsView("Searching...");
 
             lyricsURLs = new List<lyricsURL>();
@@ -367,6 +369,7 @@ namespace Spotify_Lyrics.NET
                 count = lyricsURLs.Count;
             }
 
+            string img = "";
             List<lyricsURL> toRemove = new List<lyricsURL>();
             for (int indx = 0; indx < count; indx++)
             {
@@ -375,14 +378,14 @@ namespace Spotify_Lyrics.NET
                 switch (lyricsURLs[indx].source)
                 {
                     case "Musixmatch":
-                        lyricsTextTemp = mmAPI.setLyrics(indx, ref lyricsURLs);
+                        lyricsTextTemp = mmAPI.setLyrics(indx, ref lyricsURLs, ref img);
                         break;
                     case "Genius":
                         await geniusAPI.setLyrics(indx, true);
                         break;
                 }
 
-                if (lyricsText.Trim().Length == 0)
+                if (lyricsTextTemp.Trim().Length == 0)
                 {
                     toRemove.Add(lyricsURLs[indx]);
                 }
@@ -413,30 +416,31 @@ namespace Spotify_Lyrics.NET
                     addToLyricsView("Downloading...");
                     sourceLabel.Text = "Lyrics from " + lyricsURLs[indx].source;
 
+                    var coverImg = "";
                     switch (lyricsURLs[indx].source)
                     {
                         case "Musixmatch":
-                            lyricsText = mmAPI.setLyrics(indx, ref lyricsURLs);
-                            coverImage.Visibility = Visibility.Collapsed;
+                            lyricsText = mmAPI.setLyrics(indx, ref lyricsURLs, ref coverImg);
                             break;
                         case "Genius":
                             await geniusAPI.setLyrics(indx);
-                            if (lyricsURLs[indx].img != "")
-                            {
-                                BitmapImage cover = new BitmapImage();
-                                cover.BeginInit();
-                                cover.UriSource = new Uri(lyricsURLs[indx].img);
-                                cover.EndInit();
-                                coverImage.Source = cover;
-                                coverImage.Visibility = Visibility.Visible;
-                            }
-                            else if (coverImage.Visibility == Visibility.Visible)
-                            {
-                                coverImage.Visibility = Visibility.Collapsed;
-                            }
+                            coverImg = lyricsURLs[indx].img;
                             break;
                     }
 
+                    if (coverImg != "")
+                    {
+                        BitmapImage cover = new BitmapImage();
+                        cover.BeginInit();
+                        cover.UriSource = new Uri(coverImg);
+                        cover.EndInit();
+                        coverImage.Source = cover;
+                        coverImage.Visibility = Visibility.Visible;
+                    }
+                    else if (coverImage.Visibility == Visibility.Visible)
+                    {
+                        coverImage.Visibility = Visibility.Collapsed;
+                    }
 
                     if (lyricsText.Trim().Length > 0)
                     {
