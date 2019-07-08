@@ -91,7 +91,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
-                <Image x:Name="coverImage" Width="65" Height="65" Margin="20,0,0,0" Visibility="Collapsed"/>
+                <Image x:Name="coverImage" Width="65" Height="65" Margin="20,3,0,0" VerticalAlignment="Center" Visibility="Collapsed"/>
             </Grid>
             
             <Grid Grid.Column="1" VerticalAlignment="Center" Margin="20,0">
