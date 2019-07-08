@@ -26,8 +26,9 @@ Download the latest version from the [Releases](https://github.com/JakubSteplows
 
 >v1.0.0 (08/07/2019):
 >- Improved UI
->- New icon
->- Added support for lyrics from Genius<br>
+>- Added new icon
+>- Added support for lyrics from Genius
+>- Fixed a few bugs and glitches<br>
 >*(the source of this version is available only in C#)*
 
 >v0.6.0 (08/05/2018):
