@@ -19,7 +19,7 @@ namespace Spotify_Lyrics.NET
     /// </summary>
     public partial class MainWindow : Window
     {
-        const string appVERSION = "v1.1.0-alpha";
+        const string appVERSION = "v1.1.0";
         const string appBUILD = "08.07.2019";
         const string appAuthor = "Jakub Stęplowski";
         const string appAuthorWebsite = "https://jakubsteplowski.com";
