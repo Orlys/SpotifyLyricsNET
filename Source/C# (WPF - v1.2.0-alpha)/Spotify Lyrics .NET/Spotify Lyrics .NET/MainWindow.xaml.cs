@@ -405,7 +405,7 @@ namespace Spotify_Lyrics.NET
         {
             if (!isDownloading)
             {
-                setBtnStatus(false);
+                if (lyricsURLs.Count > 1) setBtnStatus(false);
                 isDownloading = true;
 
                 try
@@ -464,7 +464,7 @@ namespace Spotify_Lyrics.NET
                 }
 
                 isDownloading = false;
-                setBtnStatus(true);
+                if (lyricsURLs.Count > 1) setBtnStatus(true);
             }
         }
 
