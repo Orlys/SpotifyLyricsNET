@@ -11,16 +11,17 @@ using System.Windows.Threading;
 using Spotify_Lyrics.NET.API;
 using System.Windows.Media.Imaging;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 
 namespace Spotify_Lyrics.NET
 {
     /// <summary>
-    /// Logica di interazione per MainWindow.xaml
+    /// Main View
     /// </summary>
     public partial class MainWindow : Window
     {
         const string appVERSION = "v1.2.0-alpha";
-        const string appBUILD = "11.07.2019";
+        const string appBUILD = "02.08.2019"; // DD.MM.YYYY
         const string appAuthor = "Jakub Stęplowski";
         const string appAuthorWebsite = "https://jakubsteplowski.com";
 
@@ -418,8 +419,15 @@ namespace Spotify_Lyrics.NET
                     lyricsText = "";
 
                     addToLyricsView("Downloading...");
-                    sourceLabel.Text = "Lyrics from " + lyricsURLs[indx].source;
+                    sourceLabel.Text = "Lyrics from ";
 
+                    Hyperlink sourceLink = new Hyperlink();
+                    sourceLink.Inlines.Add(lyricsURLs[indx].source);
+                    sourceLink.Foreground = new SolidColorBrush(Colors.Gray);
+                    sourceLink.NavigateUri = new Uri(lyricsURLs[indx].url);
+                    sourceLink.RequestNavigate += Hyperlink_RequestNavigate;
+                    sourceLabel.Inlines.Add(sourceLink);
+                    
                     var coverImg = "";
                     switch (lyricsURLs[indx].source)
                     {
@@ -494,6 +502,12 @@ namespace Spotify_Lyrics.NET
             {
                 return "";
             }
+        }
+
+        private static void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
         }
     }
 }
