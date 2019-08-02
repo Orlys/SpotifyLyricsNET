@@ -358,6 +358,8 @@ namespace Spotify_Lyrics.NET
             else
             {
                 clearLyricsView();
+                sourceLabel.Text = "";
+                coverImage.Visibility = Visibility.Collapsed;
                 addToLyricsView("I can't find the lyrics, sorry. :(");
                 setBtnStatus(false);
                 countLabel.Text = "0 of 0";
@@ -462,12 +464,16 @@ namespace Spotify_Lyrics.NET
                     else
                     {
                         clearLyricsView();
+                        sourceLabel.Text = "";
+                        coverImage.Visibility = Visibility.Collapsed;
                         addToLyricsView("I can't find the lyrics, sorry. :(");
                     }
                 }
                 catch (Exception ex)
                 {
                     clearLyricsView();
+                    sourceLabel.Text = "";
+                    coverImage.Visibility = Visibility.Collapsed;
                     addToLyricsView("I can't find the lyrics, sorry. :(");
                 }
 
