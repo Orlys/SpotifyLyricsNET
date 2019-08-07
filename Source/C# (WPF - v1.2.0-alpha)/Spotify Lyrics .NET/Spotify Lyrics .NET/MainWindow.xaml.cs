@@ -25,6 +25,9 @@ namespace Spotify_Lyrics.NET
         const string appAuthor = "Jakub Stęplowski";
         const string appAuthorWebsite = "https://jakubsteplowski.com";
 
+        const int fontSizeMIN = 8;
+        const int fontSizeMAX = 42;
+
         public struct lyricsURL
         {
             public string title;
@@ -47,6 +50,7 @@ namespace Spotify_Lyrics.NET
         private SolidColorBrush bgColor2 = new SolidColorBrush();
         private SolidColorBrush textColor = new SolidColorBrush();
         private SolidColorBrush textColor2 = new SolidColorBrush();
+        private SolidColorBrush spotifyGreen = new SolidColorBrush(Color.FromRgb(29, 185, 84));
 
         private MusixmatchAPI mmAPI = new MusixmatchAPI();
         private GeniusAPI geniusAPI;
@@ -57,11 +61,6 @@ namespace Spotify_Lyrics.NET
             Loaded += MainWindow_Loaded;
             SizeChanged += MainWindow_SizeChanged;
             LocationChanged += MainView_LocationChanged;
-
-            darkTheme.Checked += darkTheme_Checked;
-            darkTheme.Unchecked += darkTheme_Unchecked;
-            topmostCheck.Checked += topmostCheck_CheckedChanged;
-            topmostCheck.Unchecked += topmostCheck_CheckedChanged;
             prevBtn.Click += prevBtn_Click;
             nextBtn.Click += nextBtn_Click;
             lyricsView.PreviewMouseWheel += ListViewScrollViewer_PreviewMouseWheel;
@@ -79,9 +78,25 @@ namespace Spotify_Lyrics.NET
             // Load Settings
             loadTheme(Properties.Settings.Default.theme);
             this.Topmost = Properties.Settings.Default.topMost;
-            topmostCheck.IsChecked = Properties.Settings.Default.topMost;
+            if (Properties.Settings.Default.topMost)
+            {
+                topModeBtnText.Text = "";
+                topModeBtnText.Foreground = spotifyGreen;
+                topModeBtnFlag.Visibility = Visibility.Visible;
+                topModeBtn.ToolTip = "Disable \"Always on Top\"";
+            }
             if (Properties.Settings.Default.theme == 1)
-                darkTheme.IsChecked = true;
+            {
+                darkModeBtnText.Foreground = spotifyGreen;
+                darkModeBtnFlag.Visibility = Visibility.Visible;
+                darkModeBtn.ToolTip = "Disable \"Dark mode\"";
+            }
+            if (Properties.Settings.Default.boldFont)
+            {
+                boldFontBtnText.Foreground = spotifyGreen;
+                boldFontBtnFlag.Visibility = Visibility.Visible;
+                boldFontBtn.ToolTip = "Disable \"Bold font\"";
+            }           
             if (Properties.Settings.Default.width > 0)
             {
                 this.Width = Properties.Settings.Default.width;
@@ -109,25 +124,22 @@ namespace Spotify_Lyrics.NET
         {
             switch (themeID)
             {
-                case 0 // Light
-               :
-                    {
-                        bgColor = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                        bgColor2 = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                        textColor = new SolidColorBrush(Color.FromRgb(24, 24, 24));
-                        textColor2 = new SolidColorBrush(Color.FromRgb(10, 10, 10));
-                        break;
-                    }
-
-                case 1 // Dark
-         :
-                    {
-                        bgColor = new SolidColorBrush(Color.FromRgb(24, 24, 24));
-                        bgColor2 = new SolidColorBrush(Color.FromRgb(61, 61, 61));
-                        textColor = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                        textColor2 = new SolidColorBrush(Color.FromRgb(179, 179, 179));
-                        break;
-                    }
+                case 0: // Light
+                {
+                    bgColor = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                    bgColor2 = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                    textColor = new SolidColorBrush(Color.FromRgb(24, 24, 24));
+                    textColor2 = new SolidColorBrush(Color.FromRgb(10, 10, 10));
+                    break;
+                }
+                case 1: // Dark
+                {
+                    bgColor = new SolidColorBrush(Color.FromRgb(24, 24, 24));
+                    bgColor2 = new SolidColorBrush(Color.FromRgb(61, 61, 61));
+                    textColor = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                    textColor2 = new SolidColorBrush(Color.FromRgb(179, 179, 179));
+                    break;
+                }
             }
 
             // Set colors
@@ -138,9 +150,12 @@ namespace Spotify_Lyrics.NET
             songTitleLabel.Foreground = textColor;
             artistLabel.Foreground = textColor2;
             versionLabel.Foreground = textColor2;
-            topmostCheck.Foreground = textColor2;
+            smallerFontBtnText.Foreground = textColor2;
+            biggerFontBtnText.Foreground = textColor2;
+            if (!Properties.Settings.Default.boldFont) boldFontBtnText.Foreground = textColor2;
+            if (themeID == 0) darkModeBtnText.Foreground = textColor2;
+            if (!Properties.Settings.Default.topMost) topModeBtnText.Foreground = textColor2;
             countLabel.Foreground = textColor2;
-            darkTheme.Foreground = textColor2;
             gradient0.Color = bgColor.Color;
             gradient1.Color = Color.FromArgb(0, bgColor.Color.R, bgColor.Color.G, bgColor.Color.B);
             gradient2.Color = Color.FromArgb(0, bgColor.Color.R, bgColor.Color.G, bgColor.Color.B);
@@ -213,17 +228,6 @@ namespace Spotify_Lyrics.NET
         {
             nextBtn.IsEnabled = status;
             prevBtn.IsEnabled = status;
-        }
-
-        private void topmostCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            // Save top most status
-            if (settingsLoaded)
-            {
-                this.Topmost = (bool)topmostCheck.IsChecked;
-                Properties.Settings.Default.topMost = (bool)topmostCheck.IsChecked;
-                Properties.Settings.Default.Save();
-            }
         }
 
         private void nextBtn_Click(object sender, EventArgs e)
@@ -520,17 +524,26 @@ namespace Spotify_Lyrics.NET
 
         private void BoldFontBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (Properties.Settings.Default.boldFont)
-            {
-                Properties.Settings.Default.boldFont = false;
-            }
-            else
-            {
-                Properties.Settings.Default.boldFont = true;
-            }
-            Properties.Settings.Default.Save();
+            // Save bold font status
+            if (settingsLoaded) {
+                if (Properties.Settings.Default.boldFont)
+                {
+                    boldFontBtnText.Foreground = textColor2;
+                    boldFontBtnFlag.Visibility = Visibility.Collapsed;
+                    boldFontBtn.ToolTip = "Enable \"Bold font\"";
+                    Properties.Settings.Default.boldFont = false;
+                }
+                else
+                {
+                    boldFontBtnText.Foreground = spotifyGreen;
+                    boldFontBtnFlag.Visibility = Visibility.Visible;
+                    boldFontBtn.ToolTip = "Disable \"Bold font\"";
+                    Properties.Settings.Default.boldFont = true;
+                }
+                Properties.Settings.Default.Save();
 
-            UpdateFont();
+                UpdateFont();
+            }
         }
 
         private void UpdateFont()
@@ -541,6 +554,76 @@ namespace Spotify_Lyrics.NET
                 TextBlock t = (TextBlock)g.Children[0];
                 t.Style = Properties.Settings.Default.boldFont ? (Style)this.Resources["BoldFont"] : (Style)this.Resources["BookFont"];
                 t.FontSize = Properties.Settings.Default.textSize;
+            }
+        }
+
+        private void BiggerFontBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Set bigger font
+            if (settingsLoaded)
+            {
+
+            }
+        }
+
+        private void SmallerFontBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Set smaller font
+            if (settingsLoaded)
+            {
+
+            }
+        }
+
+        private void DarkModeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Save dark mode status
+            if (settingsLoaded)
+            {
+                if (Properties.Settings.Default.theme == 1)
+                {
+                    darkModeBtnText.Foreground = textColor2;
+                    darkModeBtnFlag.Visibility = Visibility.Collapsed;
+                    darkModeBtn.ToolTip = "Enable \"Dark mode\"";
+                    Properties.Settings.Default.theme = 0;
+                }
+                else
+                {
+                    darkModeBtnText.Foreground = spotifyGreen;
+                    darkModeBtnFlag.Visibility = Visibility.Visible;
+                    darkModeBtn.ToolTip = "Disable \"Dark mode\"";
+                    Properties.Settings.Default.theme = 1;
+                }
+                Properties.Settings.Default.Save();
+
+                loadTheme(Properties.Settings.Default.theme);
+            }
+        }
+
+        private void TopModeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Save top most status
+            if (settingsLoaded)
+            {
+                if (Properties.Settings.Default.topMost)
+                {
+                    topModeBtnText.Text = "";
+                    topModeBtnText.Foreground = textColor2;
+                    topModeBtnFlag.Visibility = Visibility.Collapsed;
+                    topModeBtn.ToolTip = "Enable \"Always on Top\"";
+                    Properties.Settings.Default.topMost = false;
+                }
+                else
+                {
+                    topModeBtnText.Text = "";
+                    topModeBtnText.Foreground = spotifyGreen;
+                    topModeBtnFlag.Visibility = Visibility.Visible;
+                    topModeBtn.ToolTip = "Disable \"Always on Top\"";
+                    Properties.Settings.Default.topMost = true;
+                }
+                Properties.Settings.Default.Save();
+
+                this.Topmost = Properties.Settings.Default.topMost;
             }
         }
     }

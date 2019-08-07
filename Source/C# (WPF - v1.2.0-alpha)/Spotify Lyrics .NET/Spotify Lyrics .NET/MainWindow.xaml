@@ -230,7 +230,7 @@
                     </Grid>
                 </Button>
 
-                <Button x:Name="biggerFontBtn" Grid.Column="1" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Increase font size">
+                <Button x:Name="biggerFontBtn" Grid.Column="1" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Increase font size" Click="BiggerFontBtn_Click">
                     <Grid VerticalAlignment="Center" Margin="10,8,10,10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="20"/>
@@ -243,7 +243,7 @@
                     </Grid>
                 </Button>
 
-                <Button x:Name="smallerFontBtn" Grid.Column="2" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Decrease font size">
+                <Button x:Name="smallerFontBtn" Grid.Column="2" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Decrease font size" Click="SmallerFontBtn_Click">
                     <Grid VerticalAlignment="Center" Margin="10,8,10,10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="20"/>
@@ -257,7 +257,7 @@
                 </Button>
             </Grid>
 
-            <Button x:Name="darkModeBtn" Grid.Column="2" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Disable &quot;Dark Mode&quot;">
+            <Button x:Name="darkModeBtn" Grid.Column="2" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Disable &quot;Dark Mode&quot;" Click="DarkModeBtn_Click">
                 <Grid VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,8,10,10">
                     <!-- Dark theme -->
                     <Grid.RowDefinitions>
@@ -266,15 +266,14 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0" VerticalAlignment="Bottom">
-                        <TextBlock x:Name="darkModeBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="16" Foreground="#1db954"/>
+                        <TextBlock x:Name="darkModeBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="16" Foreground="#8d8d8d"/>
                     </Grid>
 
-                    <Ellipse x:Name="darkModeBtnFlag" Grid.Row="1" Width="5" Height="5" VerticalAlignment="Bottom" Margin="0,0,0,4" Fill="#1db954" Canvas.Left="12" Canvas.Top="25" />
-                    <CheckBox x:Name="darkTheme" Content="Dark theme" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{DynamicResource BookFont}" Foreground="#8d8d8d" FontSize="11" Visibility="Collapsed"/>
+                    <Ellipse x:Name="darkModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="5" Height="5" VerticalAlignment="Bottom" Margin="0,0,0,4" Fill="#1db954" Canvas.Left="12" Canvas.Top="25" />
                 </Grid>
             </Button>
 
-            <Button x:Name="topModeBtn" Grid.Column="3" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Disable &quot;Always on Top&quot;">
+            <Button x:Name="topModeBtn" Grid.Column="3" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Disable &quot;Always on Top&quot;" Click="TopModeBtn_Click">
                 <Grid VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,8,18,10">
                     <!-- Always on Top -->
                     <Grid.RowDefinitions>
@@ -283,13 +282,12 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0" VerticalAlignment="Bottom">
-                        <TextBlock x:Name="topModeBtnText" Style="{DynamicResource IconFont}" Text="" Margin="0,0,0,2" FontSize="10" Foreground="#1db954"/>
+                        <TextBlock x:Name="topModeBtnText" Style="{DynamicResource IconFont}" Text="" Margin="0,0,0,2" FontSize="10" Foreground="#8d8d8d"/>
                         <!-- pin  -->
                         <!-- unpin  -->
                     </Grid>
 
-                    <Ellipse x:Name="topModeBtnFlag" Grid.Row="1" Width="5" Height="5" VerticalAlignment="Bottom" Margin="0,0,0,4" Fill="#1db954" Canvas.Left="12" Canvas.Top="25"/>
-                    <CheckBox x:Name="topmostCheck" Content="Always on Top" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{DynamicResource BookFont}" Foreground="#8d8d8d" FontSize="11" Visibility="Collapsed"/>
+                    <Ellipse x:Name="topModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="5" Height="5" VerticalAlignment="Bottom" Margin="0,0,0,4" Fill="#1db954" Canvas.Left="12" Canvas.Top="25"/>
                 </Grid>
             </Button>
         </Grid>
