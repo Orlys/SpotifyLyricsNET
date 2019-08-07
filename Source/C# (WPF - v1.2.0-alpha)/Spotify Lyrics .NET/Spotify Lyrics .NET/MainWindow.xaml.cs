@@ -107,6 +107,13 @@ namespace Spotify_Lyrics.NET
                 this.Left = Properties.Settings.Default.xPos;
                 this.Top = Properties.Settings.Default.yPos;
             }
+            if (Properties.Settings.Default.textSize < fontSizeMIN)
+                Properties.Settings.Default.textSize = fontSizeMIN;
+            else if (Properties.Settings.Default.textSize > fontSizeMAX)
+                Properties.Settings.Default.textSize = fontSizeMAX;
+            biggerFontBtn.IsEnabled = (Properties.Settings.Default.textSize != fontSizeMAX);
+            smallerFontBtn.IsEnabled = (Properties.Settings.Default.textSize != fontSizeMIN);
+
             this.Opacity = Properties.Settings.Default.opacity;
             settingsLoaded = true;
 
@@ -275,6 +282,8 @@ namespace Spotify_Lyrics.NET
             lString.Style = Properties.Settings.Default.boldFont ? (Style)this.Resources["BoldFont"] : (Style)this.Resources["BookFont"];
             lString.Foreground = textColor;
             lString.FontSize = Properties.Settings.Default.textSize;
+            lString.FontStretch = FontStretches.ExtraExpanded;
+            lString.LineHeight = 20;
             lString.TextAlignment = TextAlignment.Center;
             lString.Text = s;
             lString.TextWrapping = TextWrapping.WrapWithOverflow;
@@ -325,6 +334,7 @@ namespace Spotify_Lyrics.NET
 
         private async void getLyrics(string artist, string song)
         {
+            setBtnStatus(false);
             clearLyricsView();
             coverImage.Visibility = Visibility.Collapsed;
             sourceLabel.Text = "";
@@ -345,8 +355,6 @@ namespace Spotify_Lyrics.NET
             {
                 if (lyricsURLs.Count > 1)
                     setBtnStatus(true);
-                else
-                    setBtnStatus(false);
                 
                 setLyrics(0);
             }
@@ -367,7 +375,6 @@ namespace Spotify_Lyrics.NET
                 sourceLabel.Text = "";
                 coverImage.Visibility = Visibility.Collapsed;
                 addToLyricsView("I can't find the lyrics, sorry. :(");
-                setBtnStatus(false);
                 countLabel.Text = "0 of 0";
             }
         }
@@ -560,18 +567,35 @@ namespace Spotify_Lyrics.NET
         private void BiggerFontBtn_Click(object sender, RoutedEventArgs e)
         {
             // Set bigger font
-            if (settingsLoaded)
+            if (settingsLoaded && Properties.Settings.Default.textSize < fontSizeMAX)
             {
 
+                Properties.Settings.Default.textSize++;
+                Properties.Settings.Default.Save();
+
+                if (!smallerFontBtn.IsEnabled && fontSizeMIN != fontSizeMAX)
+                    smallerFontBtn.IsEnabled = true;
+                if (Properties.Settings.Default.textSize == fontSizeMAX)
+                    biggerFontBtn.IsEnabled = false;
+
+                UpdateFont();
             }
         }
 
         private void SmallerFontBtn_Click(object sender, RoutedEventArgs e)
         {
             // Set smaller font
-            if (settingsLoaded)
+            if (settingsLoaded && Properties.Settings.Default.textSize > fontSizeMIN)
             {
+                Properties.Settings.Default.textSize--;
+                Properties.Settings.Default.Save();
 
+                if (!biggerFontBtn.IsEnabled && fontSizeMIN != fontSizeMAX)
+                    biggerFontBtn.IsEnabled = true;
+                if (Properties.Settings.Default.textSize == fontSizeMIN)
+                    smallerFontBtn.IsEnabled = false;
+
+                UpdateFont();
             }
         }
 
