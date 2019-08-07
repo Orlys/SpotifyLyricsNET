@@ -218,6 +218,7 @@
     <None Include="Resources\settings-white.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\spotify-lyrics-net-v1-2.ttf" />
     <None Include="Resources\theme0.png" />
   </ItemGroup>
   <ItemGroup>

@@ -72,7 +72,9 @@ namespace Spotify_Lyrics.NET
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            versionLabel.Text = appVERSION;
+            versionLabel.Inlines.Add(appVERSION);
+            versionLabel.Inlines.Add(new LineBreak());
+            versionLabel.Inlines.Add(appBUILD);
 
             // Load Settings
             loadTheme(Properties.Settings.Default.theme);
@@ -266,7 +268,7 @@ namespace Spotify_Lyrics.NET
             Grid lGrid = new Grid();
             lGrid.Width = this.Width - 50;
             TextBlock lString = new TextBlock();
-            lString.FontFamily = new FontFamily("/Spotify_Lyrics.NET;component/Resources/#Circular Book");
+            lString.Style = Properties.Settings.Default.boldFont ? (Style)this.Resources["BoldFont"] : (Style)this.Resources["BookFont"];
             lString.Foreground = textColor;
             lString.FontSize = Properties.Settings.Default.textSize;
             lString.TextAlignment = TextAlignment.Center;
@@ -514,6 +516,32 @@ namespace Spotify_Lyrics.NET
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
             e.Handled = true;
+        }
+
+        private void BoldFontBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (Properties.Settings.Default.boldFont)
+            {
+                Properties.Settings.Default.boldFont = false;
+            }
+            else
+            {
+                Properties.Settings.Default.boldFont = true;
+            }
+            Properties.Settings.Default.Save();
+
+            UpdateFont();
+        }
+
+        private void UpdateFont()
+        {
+            foreach (ListViewItem s in lyricsView.Items)
+            {
+                Grid g = (Grid)s.Content;
+                TextBlock t = (TextBlock)g.Children[0];
+                t.Style = Properties.Settings.Default.boldFont ? (Style)this.Resources["BoldFont"] : (Style)this.Resources["BookFont"];
+                t.FontSize = Properties.Settings.Default.textSize;
+            }
         }
     }
 }

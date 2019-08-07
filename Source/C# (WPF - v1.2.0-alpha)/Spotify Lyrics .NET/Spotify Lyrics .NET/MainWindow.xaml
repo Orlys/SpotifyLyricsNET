@@ -38,6 +38,32 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="TransparentButton" TargetType="{x:Type Button}">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="grid" Opacity="0.8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="grid" Value="Transparent"/>
+                                <Setter Property="Opacity" TargetName="grid" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="grid" Value="Transparent"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" TargetName="grid" Value="0.25"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <Style x:Key="BookFont">
             <Setter Property="TextElement.FontFamily" Value="Resources/#Circular Book" />
         </Style>
@@ -46,6 +72,9 @@
         </Style>
         <Style x:Key="MediumFont">
             <Setter Property="TextElement.FontFamily" Value="Resources/#Circular Medium" />
+        </Style>
+        <Style x:Key="IconFont">
+            <Setter Property="TextElement.FontFamily" Value="Resources/#spotify-lyrics-net-v1-2" />
         </Style>
     </Window.Resources>
 
@@ -109,7 +138,7 @@
                     <TextBlock x:Name="artistLabel" Text="Jakub Stęplowski" Style="{DynamicResource BookFont}" Foreground="#b3b3b3" FontSize="14"/>
                 </Grid>
 
-                <Grid Grid.Row="2" Margin="0,5,0,0">
+                <Grid Grid.Row="2" Margin="0,2,0,0">
                     <TextBlock x:Name="sourceLabel" Text="" Style="{DynamicResource BookFont}" Foreground="Gray" FontSize="12"/>
                 </Grid>
             </Grid>
@@ -174,8 +203,8 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0" VerticalAlignment="Center" Margin="10,10">
-                <TextBlock x:Name="versionLabel" Text="" Style="{DynamicResource BookFont}" Foreground="#8d8d8d" FontSize="11"/>
+            <Grid Grid.Column="0" VerticalAlignment="Center" Margin="18,10,10,10">
+                <TextBlock x:Name="versionLabel" Text="" Style="{DynamicResource BoldFont}" Foreground="#8d8d8d" FontSize="12"/>
             </Grid>
 
             <Grid Grid.Column="1">
@@ -186,28 +215,83 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <Grid Grid.Column="0">
-                    
-                </Grid>
+                <Button x:Name="boldFontBtn" Grid.Column="0" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Enable &quot;Bold font&quot;" Click="BoldFontBtn_Click">
+                    <Grid VerticalAlignment="Center" Margin="10,8,10,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
 
-                <Grid Grid.Column="1">
+                        <Grid Grid.Row="0" VerticalAlignment="Bottom">
+                            <TextBlock x:Name="boldFontBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="14" Foreground="#8d8d8d"/>
+                        </Grid>
 
-                </Grid>
+                        <Ellipse x:Name="boldFontBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="5" Height="5" VerticalAlignment="Bottom" Margin="0,0,0,4" Fill="#1db954" Canvas.Left="12" Canvas.Top="25" />
+                    </Grid>
+                </Button>
 
-                <Grid Grid.Column="2">
+                <Button x:Name="biggerFontBtn" Grid.Column="1" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Increase font size">
+                    <Grid VerticalAlignment="Center" Margin="10,8,10,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
 
-                </Grid>
+                        <Grid Grid.Row="0" VerticalAlignment="Bottom">
+                            <TextBlock x:Name="biggerFontBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="14" Foreground="#8d8d8d"/>
+                        </Grid>
+                    </Grid>
+                </Button>
+
+                <Button x:Name="smallerFontBtn" Grid.Column="2" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Decrease font size">
+                    <Grid VerticalAlignment="Center" Margin="10,8,10,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" VerticalAlignment="Bottom">
+                            <TextBlock x:Name="smallerFontBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="14" Foreground="#8d8d8d"/>
+                        </Grid>
+                    </Grid>
+                </Button>
             </Grid>
 
-            <Grid Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10">
-                <!-- Dark theme -->
-                <CheckBox x:Name="darkTheme" Content="Dark theme" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{DynamicResource BookFont}" Foreground="#8d8d8d" FontSize="11"/>
-            </Grid>
+            <Button x:Name="darkModeBtn" Grid.Column="2" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Disable &quot;Dark Mode&quot;">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,8,10,10">
+                    <!-- Dark theme -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
 
-            <Grid Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10">
-                <!-- Always on Top -->
-                <CheckBox x:Name="topmostCheck" Content="Always on Top" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{DynamicResource BookFont}" Foreground="#8d8d8d" FontSize="11"/>
-            </Grid>
+                    <Grid Grid.Row="0" VerticalAlignment="Bottom">
+                        <TextBlock x:Name="darkModeBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="16" Foreground="#1db954"/>
+                    </Grid>
+
+                    <Ellipse x:Name="darkModeBtnFlag" Grid.Row="1" Width="5" Height="5" VerticalAlignment="Bottom" Margin="0,0,0,4" Fill="#1db954" Canvas.Left="12" Canvas.Top="25" />
+                    <CheckBox x:Name="darkTheme" Content="Dark theme" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{DynamicResource BookFont}" Foreground="#8d8d8d" FontSize="11" Visibility="Collapsed"/>
+                </Grid>
+            </Button>
+
+            <Button x:Name="topModeBtn" Grid.Column="3" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Disable &quot;Always on Top&quot;">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,8,18,10">
+                    <!-- Always on Top -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" VerticalAlignment="Bottom">
+                        <TextBlock x:Name="topModeBtnText" Style="{DynamicResource IconFont}" Text="" Margin="0,0,0,2" FontSize="10" Foreground="#1db954"/>
+                        <!-- pin  -->
+                        <!-- unpin  -->
+                    </Grid>
+
+                    <Ellipse x:Name="topModeBtnFlag" Grid.Row="1" Width="5" Height="5" VerticalAlignment="Bottom" Margin="0,0,0,4" Fill="#1db954" Canvas.Left="12" Canvas.Top="25"/>
+                    <CheckBox x:Name="topmostCheck" Content="Always on Top" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{DynamicResource BookFont}" Foreground="#8d8d8d" FontSize="11" Visibility="Collapsed"/>
+                </Grid>
+            </Button>
         </Grid>
     </Grid>
 </Window>
