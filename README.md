@@ -1,9 +1,9 @@
 ![](/Screenshots/SpotifyLyricsNET-logo-v1.png)
 # Spotify Lyrics .NET
-![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v1.1.0-blue.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.6.0-blue.svg?style=flat)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v1.2.0-blue.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.6.0-blue.svg?style=flat)
 > Get the lyrics of the song you're listening to on Spotify
 
-![](/Screenshots/SpotifyLyricsNET-v1.1.0.png)
+![](/Screenshots/SpotifyLyricsNET-v1.2.0.png)
 
 # Requirements
 ## To use the software:
@@ -11,7 +11,7 @@
 - Spotify
 - Internet Connection
 
-> The software has been most recently tested with **Spotify 1.1.10.540.gfcf0430f**.<br>I can't guarantee that it works with other versions.
+> The software has been most recently tested with **Spotify 1.1.12.449.g4109e645**.<br>I can't guarantee that it works with other versions.
 
 Download the latest version from the [Releases](https://github.com/JakubSteplowski/SpotifyLyricsNET/releases) section.
 
@@ -23,6 +23,19 @@ Download the latest version from the [Releases](https://github.com/JakubSteplows
 - NuGet Costura package
 
 # Changelog
+
+>v1.2.0 (07/08/2019):
+>- Improved UI, more clean
+>- Added ability to increase and decrease the font size (default: min 8px, max 42px)
+>- Added ability to enable/disable bold font for the lyrics
+>- Added tooltips to buttons and title
+>- Added hyperlink to the source of the lyrics, you can open them in your browser if you would like to
+>- Released x64 build (with the usual x86)
+>- Fixed font family for the lyrics
+>- Fixed searching, now if you pause and play a song for a moment, it won't search it again uselessly
+>- Fixed titles (removed "&&")
+>- Fixed previous and next buttons, now they are disabled when there is only 1 lyric<br>
+>*(the source of this version is available only in C#)*
 
 >v1.1.0 (08/07/2019):
 >- Improved UI

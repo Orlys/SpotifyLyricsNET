@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'spotify-lyrics-net-v1-2';
+  src:
+    url('fonts/spotify-lyrics-net-v1-2.ttf?xnnesh') format('truetype'),
+    url('fonts/spotify-lyrics-net-v1-2.woff?xnnesh') format('woff'),
+    url('fonts/spotify-lyrics-net-v1-2.svg?xnnesh#spotify-lyrics-net-v1-2') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'spotify-lyrics-net-v1-2' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bold:before {
+  content: "\e900";
+}
+.icon-day:before {
+  content: "\e901";
+}
+.icon-daybold:before {
+  content: "\e902";
+}
+.icon-fontdown:before {
+  content: "\e903";
+}
+.icon-fontup:before {
+  content: "\e904";
+}
+.icon-night:before {
+  content: "\e905";
+}
+.icon-nightbold:before {
+  content: "\e906";
+}
+.icon-pin:before {
+  content: "\e907";
+}
+.icon-pinbold:before {
+  content: "\e908";
+}
+.icon-unpin:before {
+  content: "\e909";
+}
+.icon-unpinbold:before {
+  content: "\e90a";
+}
