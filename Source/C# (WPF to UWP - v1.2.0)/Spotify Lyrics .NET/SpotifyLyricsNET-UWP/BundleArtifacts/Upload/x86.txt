@@ -1,0 +1,2 @@
+MainPackage=D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.2.0) - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x86\Release\Upload\SpotifyLyricsNET-UWP_1.2.0.0_x86.appx
+SymbolPackage=D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.2.0) - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x86\Release\Upload\SpotifyLyricsNET-UWP_1.2.0.0\SpotifyLyricsNET-UWP_1.2.0.0_x86.appxsym
