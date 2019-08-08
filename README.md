@@ -1,9 +1,9 @@
 ![](/Screenshots/SpotifyLyricsNET-logo-v1.png)
 # Spotify Lyrics .NET
-![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v1.2.0-blue.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.6.0-blue.svg?style=flat)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v1.3.0-blue.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.6.0-blue.svg?style=flat)
 > Get the lyrics of the song you're listening to on Spotify
 
-![](/Screenshots/SpotifyLyricsNET-v1.2.0.png)
+![](/Screenshots/SpotifyLyricsNET-v1.3.0.png)
 
 # Requirements
 ## To use the software:
@@ -23,6 +23,15 @@ Download the latest version from the [Releases](https://github.com/JakubSteplows
 - NuGet Costura package
 
 # Changelog
+
+> Notes:<br>
+> Date format: DD/MM/YYYY
+
+>v1.3.0 (08/08/2019):
+>- Improved lyrics fetching
+>- Search of the first available lyrics (check them all until find one, not only the first 3)
+>- All the lyrics are checked in background (no more empty lyrics after clicking on "NEXT")
+>- Fixed and improved Genius API
 
 >v1.2.0 (07/08/2019):
 >- Improved UI, more clean
