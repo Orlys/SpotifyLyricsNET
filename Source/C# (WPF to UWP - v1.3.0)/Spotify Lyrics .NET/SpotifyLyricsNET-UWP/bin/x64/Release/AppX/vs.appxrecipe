@@ -31,7 +31,7 @@
     <AppXManifest Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x64\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-08T13:12:08.360</Modified>
+      <Modified>2019-08-08T13:16:20.872</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -291,7 +291,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x64\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-08-08T13:12:00.749</Modified>
+      <Modified>2019-08-08T13:16:20.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\Genius.NET.2.0.0\lib\netstandard1.1\Genius.dll">
       <PackagePath>Spotify Lyrics .NET\Genius.dll</PackagePath>
@@ -375,7 +375,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Release\Spotify_Lyrics.NET.exe">
       <PackagePath>Spotify Lyrics .NET\Spotify_Lyrics.NET.exe</PackagePath>
-      <Modified>2019-08-08T13:12:07.274</Modified>
+      <Modified>2019-08-08T13:16:19.595</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Release\Spotify_Lyrics.NET.exe.config">
       <PackagePath>Spotify Lyrics .NET\Spotify_Lyrics.NET.exe.config</PackagePath>
