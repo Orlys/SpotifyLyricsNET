@@ -10,291 +10,291 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>2238JakubSteplowski.SpotifyLyrics.NET</PackageIdentityName>
     <PackageIdentityPublisher>CN=7981F0F6-E624-4A57-A40C-F32FC8A8D710</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x86\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x86\Release\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath></WindowsSdkPath>
-    <LayoutDir>D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x86\Release\AppX</LayoutDir>
+    <LayoutDir>D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x86\Release\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x86\Release\AppxManifest.xml">
+    <AppXManifest Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x86\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LargeTile.scale-100.png">
       <PackagePath>Images\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LargeTile.scale-125.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LargeTile.scale-125.png">
       <PackagePath>Images\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LargeTile.scale-150.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LargeTile.scale-150.png">
       <PackagePath>Images\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LargeTile.scale-200.png">
       <PackagePath>Images\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LargeTile.scale-400.png">
       <PackagePath>Images\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SmallTile.scale-100.png">
       <PackagePath>Images\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SmallTile.scale-125.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SmallTile.scale-125.png">
       <PackagePath>Images\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SmallTile.scale-150.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SmallTile.scale-150.png">
       <PackagePath>Images\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SmallTile.scale-200.png">
       <PackagePath>Images\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SmallTile.scale-400.png">
       <PackagePath>Images\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SplashScreen.scale-100.png">
       <PackagePath>Images\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SplashScreen.scale-125.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SplashScreen.scale-125.png">
       <PackagePath>Images\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SplashScreen.scale-150.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SplashScreen.scale-150.png">
       <PackagePath>Images\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SplashScreen.scale-200.png">
       <PackagePath>Images\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\LockScreenLogo.scale-200.png">
       <PackagePath>Images\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\SplashScreen.scale-400.png">
       <PackagePath>Images\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square150x150Logo.scale-100.png">
       <PackagePath>Images\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square150x150Logo.scale-125.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square150x150Logo.scale-125.png">
       <PackagePath>Images\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square150x150Logo.scale-150.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square150x150Logo.scale-150.png">
       <PackagePath>Images\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square150x150Logo.scale-200.png">
       <PackagePath>Images\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square150x150Logo.scale-400.png">
       <PackagePath>Images\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-lightunplated_targetsize-16.png">
       <PackagePath>Images\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-lightunplated_targetsize-24.png">
       <PackagePath>Images\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-lightunplated_targetsize-256.png">
       <PackagePath>Images\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-lightunplated_targetsize-32.png">
       <PackagePath>Images\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-lightunplated_targetsize-48.png">
       <PackagePath>Images\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Images\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Images\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Images\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Images\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.scale-100.png">
       <PackagePath>Images\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.scale-125.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.scale-125.png">
       <PackagePath>Images\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.scale-150.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.scale-150.png">
       <PackagePath>Images\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.scale-200.png">
       <PackagePath>Images\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.scale-400.png">
       <PackagePath>Images\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-16.png">
       <PackagePath>Images\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-24.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-24.png">
       <PackagePath>Images\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-256.png">
       <PackagePath>Images\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-32.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-32.png">
       <PackagePath>Images\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Square44x44Logo.targetsize-48.png">
       <PackagePath>Images\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\StoreLogo.scale-100.png">
       <PackagePath>Images\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\StoreLogo.scale-125.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\StoreLogo.scale-125.png">
       <PackagePath>Images\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\StoreLogo.scale-150.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\StoreLogo.scale-150.png">
       <PackagePath>Images\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\StoreLogo.scale-200.png">
       <PackagePath>Images\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\StoreLogo.scale-400.png">
       <PackagePath>Images\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Wide310x150Logo.scale-100.png">
       <PackagePath>Images\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Wide310x150Logo.scale-125.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Wide310x150Logo.scale-125.png">
       <PackagePath>Images\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Wide310x150Logo.scale-150.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Wide310x150Logo.scale-150.png">
       <PackagePath>Images\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Wide310x150Logo.scale-200.png">
       <PackagePath>Images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\Images\Wide310x150Logo.scale-400.png">
       <PackagePath>Images\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x86\Release\resources.pri">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x86\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\Genius.NET.2.0.0\lib\netstandard1.1\Genius.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\Genius.NET.2.0.0\lib\netstandard1.1\Genius.dll">
       <PackagePath>Spotify Lyrics .NET\Genius.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\HtmlAgilityPack.1.8.11\lib\Net45\HtmlAgilityPack.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\HtmlAgilityPack.1.8.11\lib\Net45\HtmlAgilityPack.dll">
       <PackagePath>Spotify Lyrics .NET\HtmlAgilityPack.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll">
       <PackagePath>Spotify Lyrics .NET\Microsoft.Win32.Primitives.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll">
       <PackagePath>Spotify Lyrics .NET\Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll">
       <PackagePath>Spotify Lyrics .NET\System.AppContext.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.Console.4.3.0\lib\net46\System.Console.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.Console.4.3.0\lib\net46\System.Console.dll">
       <PackagePath>Spotify Lyrics .NET\System.Console.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll">
       <PackagePath>Spotify Lyrics .NET\System.Globalization.Calendars.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll">
       <PackagePath>Spotify Lyrics .NET\System.IO.Compression.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll">
       <PackagePath>Spotify Lyrics .NET\System.IO.Compression.ZipFile.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll">
       <PackagePath>Spotify Lyrics .NET\System.IO.FileSystem.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll">
       <PackagePath>Spotify Lyrics .NET\System.IO.FileSystem.Primitives.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll">
       <PackagePath>Spotify Lyrics .NET\System.Net.Http.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll">
       <PackagePath>Spotify Lyrics .NET\System.Net.Sockets.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll">
       <PackagePath>Spotify Lyrics .NET\System.Runtime.InteropServices.RuntimeInformation.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5\System.Runtime.WindowsRuntime.dll">
       <PackagePath>Spotify Lyrics .NET\System.Runtime.WindowsRuntime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll">
       <PackagePath>Spotify Lyrics .NET\System.Security.Cryptography.Algorithms.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll">
       <PackagePath>Spotify Lyrics .NET\System.Security.Cryptography.Encoding.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll">
       <PackagePath>Spotify Lyrics .NET\System.Security.Cryptography.Primitives.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll">
       <PackagePath>Spotify Lyrics .NET\System.Security.Cryptography.X509Certificates.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll">
       <PackagePath>Spotify Lyrics .NET\System.Xml.ReaderWriter.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x86\Release\Spotify_Lyrics.NET.exe">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x86\Release\Spotify_Lyrics.NET.exe">
       <PackagePath>Spotify Lyrics .NET\Spotify_Lyrics.NET.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.2.0%29 - Microsoft Store\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x86\Release\Spotify_Lyrics.NET.exe.config">
+    <AppxPackagedFile Include="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# %28WPF to UWP - v1.3.0%29\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x86\Release\Spotify_Lyrics.NET.exe.config">
       <PackagePath>Spotify Lyrics .NET\Spotify_Lyrics.NET.exe.config</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

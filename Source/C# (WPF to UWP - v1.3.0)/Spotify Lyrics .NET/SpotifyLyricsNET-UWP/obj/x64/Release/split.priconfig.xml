@@ -6,7 +6,7 @@
     <autoResourcePackage qualifier="DXFeatureLevel" />
     <omitSchemaFromResourcePacks />
   </packaging>
-  <index root="\" startIndexAt="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.2.0) - Microsoft Store\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x64\Release\resources.pri">
+  <index root="\" startIndexAt="D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x64\Release\resources.pri">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />

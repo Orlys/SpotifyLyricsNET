@@ -9,7 +9,7 @@
     <AppIconSource>D:\Documenti\Source\Repos\SpotifyLyricsNET\Screenshots\SpotifyLyricsNET-logo-v1.png</AppIconSource>
     <SplashScreenSource>D:\Documenti\Source\Repos\SpotifyLyricsNET\Screenshots\SpotifyLyricsNET-logo-v1.png</SplashScreenSource>
     <PackageLogoSource>D:\Documenti\Source\Repos\SpotifyLyricsNET\Screenshots\SpotifyLyricsNET-logo-v1.png</PackageLogoSource>
-    <UapAppxPackageBuildMode>CI</UapAppxPackageBuildMode>
+    <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
     <AppxShowAllApps>False</AppxShowAllApps>
     <AppxBuildConfigurationSelection>x86|x64</AppxBuildConfigurationSelection>
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
