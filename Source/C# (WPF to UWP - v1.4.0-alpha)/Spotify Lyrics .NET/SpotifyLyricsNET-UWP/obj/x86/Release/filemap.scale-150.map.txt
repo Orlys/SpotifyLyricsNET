@@ -1,0 +1,13 @@
+﻿[ResourceMetadata]
+"ResourceId"			"filemap.scale-150"
+"ResourceDimensions"		"scale-150"
+
+[Files]
+"D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x86\Release\filemap.scale-150.pri"			"resources.pri"
+"D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x86\Release\PackageLayout\Images\Wide310x150Logo.scale-150.png"			"Images\Wide310x150Logo.scale-150.png"
+"D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x86\Release\PackageLayout\Images\StoreLogo.scale-150.png"			"Images\StoreLogo.scale-150.png"
+"D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x86\Release\PackageLayout\Images\Square44x44Logo.scale-150.png"			"Images\Square44x44Logo.scale-150.png"
+"D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x86\Release\PackageLayout\Images\Square150x150Logo.scale-150.png"			"Images\Square150x150Logo.scale-150.png"
+"D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x86\Release\PackageLayout\Images\SplashScreen.scale-150.png"			"Images\SplashScreen.scale-150.png"
+"D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x86\Release\PackageLayout\Images\SmallTile.scale-150.png"			"Images\SmallTile.scale-150.png"
+"D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x86\Release\PackageLayout\Images\LargeTile.scale-150.png"			"Images\LargeTile.scale-150.png"

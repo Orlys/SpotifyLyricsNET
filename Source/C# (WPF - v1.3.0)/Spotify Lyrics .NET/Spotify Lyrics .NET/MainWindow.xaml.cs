@@ -353,7 +353,7 @@ namespace Spotify_Lyrics.NET
                 setLyrics(0);
 
                 // Check all the next lyrics in background
-                checkLyrics(lyricsURLs.Count, true);
+                //checkLyrics(lyricsURLs.Count, true);
             }
             else if (song.Contains("-"))
             {

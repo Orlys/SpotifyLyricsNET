@@ -1,0 +1,480 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genius</name>
+    </assembly>
+    <members>
+        <member name="T:Genius.Clients.AccountsClient">
+            <inheritdoc />
+            <summary>
+                Gets information about genius user currently authenticated
+            </summary>
+        </member>
+        <member name="T:Genius.Clients.AnnotationsClient">
+            <inheritdoc />
+            <summary>
+                Annotation is a piece of content about a part of a document
+            </summary>
+        </member>
+        <member name="M:Genius.Clients.AnnotationsClient.#ctor(Genius.Http.IApiConnection)">
+            <param name="apiConnection">Instance of apiConnection</param>
+        </member>
+        <member name="T:Genius.Clients.ArtistsClient">
+            <inheritdoc />
+        </member>
+        <member name="T:Genius.Clients.IAccountsClient">
+            <summary>
+                https://docs.genius.com/#!#account-h2
+            </summary>
+        </member>
+        <member name="T:Genius.Clients.IAnnotationsClient">
+            <summary>
+                https://docs.genius.com/#annotations-h2
+            </summary>
+        </member>
+        <member name="T:Genius.Clients.IArtistsClient">
+            <summary>
+                An artist is how Genius represents the creator of one or more songs (or other documents hosted on Genius).
+                https://docs.genius.com/#artists-h2
+            </summary>
+        </member>
+        <member name="T:Genius.Clients.IReferentsClient">
+            <summary>
+                Referents are the sections of a piece of content to which annotations are attached.
+                https://docs.genius.com/#referents-h2
+            </summary>
+        </member>
+        <member name="T:Genius.Clients.ISongsClient">
+            <summary>
+                A song is a document hosted on Genius. It's usually music lyrics.
+                https://docs.genius.com/#songs-h2
+            </summary>
+        </member>
+        <member name="T:Genius.Clients.IVoteClient">
+            <summary>
+                Provides methods to upvote, downvote and unvote
+                https://docs.genius.com/#annotations-h2
+                Note: Currently users can only vote on annotations.
+            </summary>
+        </member>
+        <member name="T:Genius.Clients.IWebPagesClient">
+            <summary>
+                A web page is a single, publicly accessible page to which annotations may be attached.
+                https://docs.genius.com/#web_pages-h2
+            </summary>
+        </member>
+        <member name="M:Genius.Clients.IWebPagesClient.GetWebPage(Genius.Models.TextFormat,System.String,System.String,System.String)">
+            <summary>
+                Gets data for a web page
+            </summary>
+            <param name="textFormat"></param>
+            <param name="rawAnnotatableUrl">The URL as it would appear in browser</param>
+            <param name="canonicalUrl">The URL as specified by an appropriate <link /> tag.</param>
+            <param name="ogUrl">The URL as specified by an og:url <meta /> tag in a page's <head /></param>
+            <returns></returns>
+        </member>
+        <member name="T:Genius.Clients.ReferentsClient">
+            <inheritdoc />
+        </member>
+        <member name="T:Genius.Clients.SongsClient">
+            <inheritdoc />
+        </member>
+        <member name="T:Genius.Clients.VoteClient">
+            <inheritdoc />
+        </member>
+        <member name="T:Genius.Clients.WebPagesClient">
+            <inheritdoc />
+        </member>
+        <member name="M:Genius.Clients.WebPagesClient.GetWebPage(Genius.Models.TextFormat,System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="P:Genius.ContentPoster.TextFormat">
+             <summary>
+             Many API requests accept a text_format query parameter that can be used to specify how text content is formatted.
+             The value for the parameter must be one or more of plain, html, and dom. 
+             The value returned will be an object with key-value pairs of formats and results:
+            
+            `plain` is just plain text, no markup
+            `html` is a string of unescaped HTML suitable for rendering by a browser
+            `dom` is a nested object representing and HTML DOM hierarchy that can be used to programmatically present structured content
+             </summary>
+        </member>
+        <member name="M:Genius.ContentPoster.CreateorUpdateAnnotation(System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new annotation on a public web page. The returned value will be the new annotation object, 
+            in the same form as would be returned by GET /annotation/:id with the new annotation's ID. More on this here: https://docs.genius.com/#annotations-h2
+            </summary>
+            <param name="isPost">Is this a POST request or a PUT request?</param>
+            <param name="markdown">The text for the note, in markdown(https://help.github.com/articles/github-flavored-markdown/)</param>
+            <param name="rawAnnotableUrl">The original URL of the page</param>
+            <param name="fragment">The highlighted fragment</param>
+            <param name="annotationId">Required if parameter isPost is false.</param>
+            <param name="beforeHtml">The HTML before the highlighted fragment (prefer up to 200 characters)</param>
+            <param name="afterHtml">The HTML after the highlighted fragment (prefer up to 200 characters)</param>
+            <param name="canonicalUrl">The href property of the &lt;link rel="canonical"&gt; tag on the page. 
+            Including it will help make sure newly created annotation appear on the correct page</param>
+            <param name="ogUrl">The content property of the &lt;meta property="og:url"&gt; tag on the page. 
+            Including it will help make sure newly created annotation appear on the correct page</param>
+            <param name="title">The title of the page</param>
+            <returns>Annotation</returns>
+        </member>
+        <member name="M:Genius.ContentPoster.DeleteAnnotation(System.String)">
+            <summary>
+            Deletes an annotation created by the authenticated user.
+            Requires scope: manage_annotation
+            </summary>
+            <param name="annotationId">Id of the annotation to be deleted</param>
+            <returns>Task</returns>
+        </member>
+        <member name="M:Genius.ContentRetriever.GetAnnotationbyId(System.String)">
+            <summary>
+                Returns object containing Annotation and Referent returned by "GET /annotations/:artistId"
+                Annotation data returned from the API includes both the substance of the annotation and the necessary
+                information for displaying it in its original context.
+                For more info see https://docs.genius.com/#annotations-h2
+            </summary>
+            <param name="annotationId">Id for the Annotation</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genius.ContentRetriever.GetReferentsbySongId(System.String,System.String)">
+            <summary>
+                Gets Referents using SongId Or UserId
+                You may pass only one of song_id and web_page_id, not both.
+            </summary>
+            <param name="songId">ID of a song to get referents for</param>
+            <param name="createdById">ID of a user to get referents for</param>
+            <returns>A List of Referents</returns>
+        </member>
+        <member name="M:Genius.ContentRetriever.GetReferentsbyWebPageId(System.String,System.String)">
+            <summary>
+                Gets Referents using WebPageId or UserId
+                You may pass only one of song_id and web_page_id, not both.
+            </summary>
+            <param name="webPageId">ID of a web page to get referents for</param>
+            <param name="createdById">ID of a user to get referents for</param>
+            <returns>A List of Referents</returns>
+        </member>
+        <member name="M:Genius.ContentRetriever.GetSongbyId(System.String)">
+            <summary>
+                Gets Data for a specific Song
+            </summary>
+            <param name="songId">Id of the song</param>
+            <returns>A Song Object</returns>
+        </member>
+        <member name="M:Genius.ContentRetriever.GetArtistById(System.String)">
+            <summary>
+                Data for a specific artist.
+            </summary>
+            <param name="artistId">ID of the artist </param>
+            <returns>An Artist Object</returns>
+        </member>
+        <member name="M:Genius.ContentRetriever.GetSongsbyArtist(System.String,System.String,System.String,System.String)">
+            <summary>
+                Documents (songs) for the artist specified. By default, 20 items are returned for each request.
+            </summary>
+            <param name="artistId">ID of the artist. </param>
+            <param name="sort">	title (default) or popularity</param>
+            <param name="perPage">Number of results to return per request</param>
+            <param name="paginatedOffset">Paginated offset, (e.g., per_page=5&amp;page=3 returns songs 11–15)</param>
+            <returns>List of Songs</returns>
+        </member>
+        <member name="T:Genius.GetAnnotationResult">
+            <summary>
+                Stores result returned from GetAnnotation Method in the form of Annotation and Referent Classes
+            </summary>
+        </member>
+        <member name="T:Genius.GeniusClient">
+            <summary>
+                A client for Genius API
+            </summary>
+        </member>
+        <member name="M:Genius.GeniusClient.#ctor(System.String)">
+            <summary>
+                Creates a new instance of GeniusClient
+            </summary>
+            <param name="accessToken">Access Token to make authorized requests.</param>
+        </member>
+        <member name="T:Genius.Helpers.Authenticator">
+            <summary>
+                Authenticates the user with Genius using OAuth2.0
+            </summary>
+        </member>
+        <member name="P:Genius.Helpers.Authenticator.ClientId">
+            <summary>
+                Your application's Client ID, as listed on the API Client management page. ClientId can be found at
+                https://genius.com/api-clients
+            </summary>
+        </member>
+        <member name="P:Genius.Helpers.Authenticator.ClientSecret">
+            <summary>
+                Your application's Client Secret, as listed on the API Client management page. ClientSecret can be found at
+                https://genius.com/api-clients
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Genius.Helpers.Authenticator.RedirectUri" -->
+        <member name="P:Genius.Helpers.Authenticator.Scope">
+            <summary>
+                The permissions your application is requesting as a space-separated list. For more details goto
+                https://docs.genius.com/#/available-scopes
+            </summary>
+        </member>
+        <member name="P:Genius.Helpers.Authenticator.State">
+            <summary>
+                A value that will be returned with the code redirect for maintaining arbitrary state through the authorization
+                process
+            </summary>
+        </member>
+        <member name="M:Genius.Helpers.Authenticator.GetAuthenticationUrl">
+            <summary>
+                Returns Authentication URL.
+                Needs variables (ClientId, RedirectUri, Scope, State and ResponseType) set before calling!
+            </summary>
+            <returns>
+                A URL that should be used to login and verify the user using any web-based client.
+                e.g. Use a Web Browser to navigate to this URL
+            </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Genius.Helpers.Authenticator.GetAuthenticationUrlClientOnly" -->
+        <member name="M:Genius.Helpers.Authenticator.GetAccessToken(System.Uri)">
+            <summary>
+                Returns OAuth Access Access Token
+            </summary>
+            <param name="redirectedUri">
+                On the authentication page the user can choose to allow the application to access Genius on their behalf.
+                They'll be asked to sign in (or, if necessary, create an account) first.
+                Then the user is redirected to https://YOUR_REDIRECT_URI/?code=CODE&amp;state=SOME_STATE_VALUE
+            </param>
+            You have to retrieve this URL from your browsing client.
+            <returns>Access Token</returns>
+        </member>
+        <member name="M:Genius.Helpers.Authenticator.GetParams(System.String)">
+            <summary>
+                Returns query parameters as Dictionary
+            </summary>
+            <param name="uri">Query Url</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genius.Helpers.UriHelper.CreateUri``1(System.String,System.String,System.Boolean,Genius.Models.VoteType,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="textFormat"></param>
+            <param name="id"></param>
+            <param name="isVoteUri"></param>
+            <param name="voteType"></param>
+            <param name="perPage"></param>
+            <param name="page"></param>
+            <param name="createdById"></param>
+            <param name="songId"></param>
+            <param name="webPageId"></param>
+            <param name="sort"></param>
+            <param name="additionalUrl"></param>
+            <param name="rawAnnotatableUrl"></param>
+            <param name="canonicalUrl"></param>
+            <param name="ogUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Genius.Http.ApiConnection">
+            <summary>
+                A connection for making HTTP requests against URI Endpoints.
+                Provides type-friendly Http methods.
+            </summary>
+        </member>
+        <member name="M:Genius.Http.ApiConnection.#ctor(System.String)">
+            <summary>
+                Recommended: Initialize ApiConnection using an accessToken
+            </summary>
+            <param name="accessToken">https://docs.genius.com/#/authentication-h1</param>
+        </member>
+        <member name="M:Genius.Http.ApiConnection.Vote(Genius.Models.TextFormat,Genius.Models.VoteType,System.String)">
+            <summary>
+                Votes on an annotation.
+            </summary>
+            <param name="textFormat"></param>
+            <param name="voteType">Upvote, Downvote or Unvote?</param>
+            <param name="annotationId">Votes are only allowed on annotations</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genius.Http.ApiConnection.Post``1(Genius.Models.TextFormat,System.Object,System.Uri)">
+            <summary>
+                POST to Genius API
+            </summary>
+            <typeparam name="T">Type of object to post</typeparam>
+            <param name="textFormat"></param>
+            <param name="payload">The object to send in JSON form with the POST request.</param>
+            <param name="uri">Optional URI parameter to which to send HTTP Request</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genius.Http.ApiConnection.Get``1(Genius.Models.TextFormat,System.String,System.Uri,System.String)">
+            <summary>
+            </summary>
+            <typeparam name="T">Type of Model</typeparam>
+            <param name="textFormat">Format of the text to be returned from the server</param>
+            <param name="id">Any type of id.</param>
+            <param name="uri">Uri to send HTTP Request to</param>
+            <param name="jsonArrayName">
+                This parameter will be used as the name of the object inside response object when
+                de-serializing response from server
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Genius.Models.Annotation">
+            <summary>
+                An annotation is a piece of content about a part of a document.
+                The document may be a song (hosted on Genius) or a web page (hosted anywhere).
+                The part of a document that an annotation is attached to is called a referent.
+                Annotation data returned from the API includes both the substance of the annotation and the necessary information
+                for displaying it in
+                its original context.
+                More here: https://docs.genius.com/#annotations-h2
+            </summary>
+        </member>
+        <member name="P:Genius.Models.Annotation.Body">
+            <summary>
+                The Content of The Annotation
+            </summary>
+        </member>
+        <member name="P:Genius.Models.Annotation.CommentCount">
+            <summary>
+                Total Number of Comments in Annotation
+            </summary>
+        </member>
+        <member name="P:Genius.Models.Annotation.Id">
+            <summary>
+                ID of The Annotation
+            </summary>
+        </member>
+        <member name="P:Genius.Models.Annotation.Url">
+            <summary>
+                Full URL to the referent on genius.com
+            </summary>
+        </member>
+        <member name="P:Genius.Models.Annotation.VotesTotal">
+            <summary>
+                Total vote score "upvotes and downvotes"
+            </summary>
+        </member>
+        <member name="P:Genius.Models.Annotation.Authors">
+            <summary>
+                List of users who contributed to this annotation
+            </summary>
+        </member>
+        <member name="T:Genius.Models.SongAnnotation">
+            <summary>
+                A variation of Annotation used with Song Class
+            </summary>
+        </member>
+        <member name="T:Genius.Models.Hit">
+            <summary>
+                Response from a search consist of an array of hits.
+            </summary>
+        </member>
+        <member name="T:Genius.Models.HttpResponse`1">
+            <summary>
+                Generic Model of HttpResponse from Genius API
+                https://docs.genius.com/#/response-format-h1
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Genius.Models.HttpResponse`1.Meta">
+            <summary>
+                Meta contains status and message for http requests.
+            </summary>
+        </member>
+        <member name="P:Genius.Models.HttpResponse`1.Response">
+            <summary>
+                The data that you requested for is contained in this field.
+                Note: This is not the top-level response field. Any GET method in this library will automatically
+                traverse to one level below the response field to get the actual object.
+            </summary>
+        </member>
+        <member name="T:Genius.Models.TextFormat">
+            https://docs.genius.com/#/response-format-h1
+        </member>
+        <member name="F:Genius.Models.TextFormat.Plain">
+            Is just plain text, no markup
+        </member>
+        <member name="F:Genius.Models.TextFormat.Html">
+            is a string of unescaped HTML suitable for HTML browsers
+        </member>
+        <member name="F:Genius.Models.TextFormat.Dom">
+            is a nested object representing HTML DOM hierarchy.
+        </member>
+        <member name="T:Genius.Models.Meta">
+            <summary>
+                Every JSON response from Genius API has a meta field which shows HTTP status code and
+                message field with error.
+            </summary>
+        </member>
+        <member name="T:Genius.Models.Referent">
+            <summary>
+                Referents are the sections of a piece of content to which annotations are attached.
+                Each referent is associated with a web page or a song and may have one or more annotations.
+                Referents can be searched by the document they are attached to or by the user that created them.
+            </summary>
+        </member>
+        <member name="T:Genius.Models.SongReferent">
+            <summary>
+                A Variation of Referent to be used by Song Class
+            </summary>
+        </member>
+        <member name="T:Genius.Models.ReferentRange">
+            <summary>
+                Information for anchoring the referent in the source text
+            </summary>
+        </member>
+        <member name="T:Genius.Models.Annotatable">
+            <summary>
+                Meta-data about the annotated document
+            </summary>
+        </member>
+        <member name="T:Genius.Models.Referents">
+            <summary>
+                Plural Referent Class
+            </summary>
+        </member>
+        <member name="T:Genius.Models.Song">
+            <summary>
+            A song is a document hosted on Genius. It's usually music lyrics.
+            Data for a song includes details about the document itself and information about all the referents that are attached to it,
+            including the text to which they refer.
+            </summary>
+        </member>
+        <member name="T:Genius.Models.User">
+            <summary>
+                A simple user at Genius.com
+            </summary>
+        </member>
+        <member name="T:Genius.Voter">
+            <summary>
+            Adds, removes or updates user's vote on an Annotation
+            </summary>
+        </member>
+        <member name="P:Genius.Voter.AuthorizationToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Genius.Voter.UpVote(System.String)">
+            <summary>
+            Votes positively for the annotation on behalf of the authenticated user.
+            </summary>
+            <param name="annotationId">Id for the annotation to be voted on</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genius.Voter.DownVote(System.String)">
+            <summary>
+            Votes negatively for the annotation on behalf of the authenticated user.
+            </summary>
+            <param name="annotationId">Id for the annotation to be voted on</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genius.Voter.UnVote(System.String)">
+            <summary>
+            Removes the authenticated user's vote (up or down) for the annotation.
+            </summary>
+            <param name="annotationId">Id for the annotation to be voted on</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

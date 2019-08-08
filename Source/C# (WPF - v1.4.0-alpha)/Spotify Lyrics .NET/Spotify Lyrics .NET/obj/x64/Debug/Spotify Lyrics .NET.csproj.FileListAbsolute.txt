@@ -1,0 +1,40 @@
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\Spotify_Lyrics.NET.exe.config
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\Spotify_Lyrics.NET.exe
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\Spotify_Lyrics.NET.pdb
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\Genius.xml
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\HtmlAgilityPack.xml
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\Newtonsoft.Json.xml
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify Lyrics .NET.csprojAssemblyReference.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\MainWindow.g.cs
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\App.g.cs
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET_MarkupCompile.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET_MarkupCompile.lref
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\MainWindow.baml
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET.g.resources
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET.Properties.Resources.resources
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify Lyrics .NET.csproj.GenerateResource.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify Lyrics .NET.csproj.CoreCompileInputs.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify Lyrics .NET.csproj.Fody.CopyLocal.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify Lyrics .NET.csproj.CopyComplete
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET.exe
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.2.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET.pdb
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\Spotify_Lyrics.NET.exe.config
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\Spotify_Lyrics.NET.exe
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\Spotify_Lyrics.NET.pdb
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\Genius.xml
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\HtmlAgilityPack.xml
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\bin\x64\Debug\Newtonsoft.Json.xml
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify Lyrics .NET.csprojAssemblyReference.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\MainWindow.g.cs
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\App.g.cs
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET_MarkupCompile.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET_MarkupCompile.lref
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\MainWindow.baml
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET.g.resources
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET.Properties.Resources.resources
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify Lyrics .NET.csproj.GenerateResource.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify Lyrics .NET.csproj.CoreCompileInputs.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify Lyrics .NET.csproj.Fody.CopyLocal.cache
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify Lyrics .NET.csproj.CopyComplete
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET.exe
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.3.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET.pdb
