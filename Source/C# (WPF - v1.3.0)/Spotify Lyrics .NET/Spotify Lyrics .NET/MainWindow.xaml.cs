@@ -97,7 +97,7 @@ namespace Spotify_Lyrics.NET
                 boldFontBtnText.Foreground = spotifyGreen;
                 boldFontBtnFlag.Visibility = Visibility.Visible;
                 boldFontBtn.ToolTip = "Disable \"Bold font\"";
-            }           
+            }
             if (Properties.Settings.Default.width > 0)
             {
                 this.Width = Properties.Settings.Default.width;
@@ -134,21 +134,21 @@ namespace Spotify_Lyrics.NET
             switch (themeID)
             {
                 case 0: // Light
-                {
-                    bgColor = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                    bgColor2 = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                    textColor = new SolidColorBrush(Color.FromRgb(24, 24, 24));
-                    textColor2 = new SolidColorBrush(Color.FromRgb(10, 10, 10));
-                    break;
-                }
+                    {
+                        bgColor = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                        bgColor2 = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                        textColor = new SolidColorBrush(Color.FromRgb(24, 24, 24));
+                        textColor2 = new SolidColorBrush(Color.FromRgb(10, 10, 10));
+                        break;
+                    }
                 case 1: // Dark
-                {
-                    bgColor = new SolidColorBrush(Color.FromRgb(24, 24, 24));
-                    bgColor2 = new SolidColorBrush(Color.FromRgb(61, 61, 61));
-                    textColor = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                    textColor2 = new SolidColorBrush(Color.FromRgb(179, 179, 179));
-                    break;
-                }
+                    {
+                        bgColor = new SolidColorBrush(Color.FromRgb(24, 24, 24));
+                        bgColor2 = new SolidColorBrush(Color.FromRgb(61, 61, 61));
+                        textColor = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                        textColor2 = new SolidColorBrush(Color.FromRgb(179, 179, 179));
+                        break;
+                    }
             }
 
             // Set colors
@@ -344,12 +344,12 @@ namespace Spotify_Lyrics.NET
 
             // Display the first result if found
             await findFirstLyrics();
-            
+
             if (lyricsURLs.Count > 0)
             {
                 if (lyricsURLs.Count > 1)
                     setBtnStatus(true);
-                
+
                 setLyrics(0);
 
                 // Check all the next lyrics in background
@@ -411,130 +411,138 @@ namespace Spotify_Lyrics.NET
 
         public async Task checkLyrics(int count, bool inBackground = false)
         {
-            if (!inBackground)
+            try
             {
-                clearLyricsView();
-                addToLyricsView("Checking...");
-            }
-            else
-            {
-                countLabel.Text = (currentLyricsIndx + 1) + " of ...";
-                setBtnStatus(false);
-            }
-
-            if (count > lyricsURLs.Count)
-            {
-                count = lyricsURLs.Count;
-            }
-
-            string img = "";
-            List<lyricsURL> toRemove = new List<lyricsURL>();
-            for (int indx = 0; indx < count; indx++)
-            {
-                lyricsTextTemp = "";
-
-                switch (lyricsURLs[indx].source)
+                if (!inBackground)
                 {
-                    case "Musixmatch":
-                        lyricsTextTemp = mmAPI.setLyrics(indx, ref lyricsURLs, ref img);
-                        break;
-                    case "Genius":
-                        await geniusAPI.setLyrics(indx, true);
-                        break;
+                    clearLyricsView();
+                    addToLyricsView("Checking...");
+                }
+                else
+                {
+                    countLabel.Text = (currentLyricsIndx + 1) + " of ...";
+                    setBtnStatus(false);
                 }
 
-                if (lyricsTextTemp.Trim().Length == 0)
+                if (count > lyricsURLs.Count)
                 {
-                    toRemove.Add(lyricsURLs[indx]);
+                    count = lyricsURLs.Count;
                 }
-            }
 
-            foreach (lyricsURL ly in toRemove)
-            {
-                lyricsURLs.Remove(ly);
-            }
+                string img = "";
+                List<lyricsURL> toRemove = new List<lyricsURL>();
+                for (int indx = 0; indx < count; indx++)
+                {
+                    lyricsTextTemp = "";
 
-            countLabel.Text = (currentLyricsIndx + 1) + " of " + lyricsURLs.Count;
-            if (lyricsURLs.Count > 1 && inBackground)
-                setBtnStatus(true);
+                    switch (lyricsURLs[indx].source)
+                    {
+                        case "Musixmatch":
+                            lyricsTextTemp = mmAPI.setLyrics(indx, ref lyricsURLs, ref img);
+                            break;
+                        case "Genius":
+                            await geniusAPI.setLyrics(indx, true);
+                            break;
+                    }
+
+                    if (lyricsTextTemp.Trim().Length == 0)
+                    {
+                        toRemove.Add(lyricsURLs[indx]);
+                    }
+                }
+
+                foreach (lyricsURL ly in toRemove)
+                {
+                    lyricsURLs.Remove(ly);
+                }
+
+                countLabel.Text = (currentLyricsIndx + 1) + " of " + lyricsURLs.Count;
+                if (lyricsURLs.Count > 1 && inBackground)
+                    setBtnStatus(true);
+            }
+            catch (Exception ex) { }
         }
 
         public async void setLyrics(int indx)
         {
-            if (!isDownloading)
+            try
             {
-                if (lyricsURLs.Count > 1) setBtnStatus(false);
-                isDownloading = true;
-
-                try
+                if (!isDownloading)
                 {
-                    currentLyricsIndx = indx;
-                    countLabel.Text = (indx + 1) + " of " + lyricsURLs.Count;
+                    if (lyricsURLs.Count > 1) setBtnStatus(false);
+                    isDownloading = true;
 
-                    clearLyricsView();
-
-                    lyricsText = "";
-
-                    addToLyricsView("Downloading...");
-                    sourceLabel.Text = "Lyrics from ";
-
-                    Hyperlink sourceLink = new Hyperlink();
-                    sourceLink.Inlines.Add(lyricsURLs[indx].source);
-                    sourceLink.Foreground = new SolidColorBrush(Colors.Gray);
-                    sourceLink.NavigateUri = new Uri(lyricsURLs[indx].url);
-                    sourceLink.RequestNavigate += Hyperlink_RequestNavigate;
-                    sourceLabel.Inlines.Add(sourceLink);
-                    
-                    var coverImg = "";
-                    switch (lyricsURLs[indx].source)
+                    try
                     {
-                        case "Musixmatch":
-                            lyricsText = mmAPI.setLyrics(indx, ref lyricsURLs, ref coverImg);
-                            break;
-                        case "Genius":
-                            await geniusAPI.setLyrics(indx);
-                            coverImg = lyricsURLs[indx].img;
-                            break;
-                    }
+                        currentLyricsIndx = indx;
+                        countLabel.Text = (indx + 1) + " of " + lyricsURLs.Count;
 
-                    if (coverImg != "")
-                    {
-                        BitmapImage cover = new BitmapImage();
-                        cover.BeginInit();
-                        cover.UriSource = new Uri(coverImg);
-                        cover.EndInit();
-                        coverImage.Source = cover;
-                        coverImage.Visibility = Visibility.Visible;
-                    }
-                    else if (coverImage.Visibility == Visibility.Visible)
-                    {
-                        coverImage.Visibility = Visibility.Collapsed;
-                    }
-
-                    if (lyricsText.Trim().Length > 0)
-                    {
                         clearLyricsView();
-                        addToLyricsView(lyricsText);
+
+                        lyricsText = "";
+
+                        addToLyricsView("Downloading...");
+                        sourceLabel.Text = "Lyrics from ";
+
+                        Hyperlink sourceLink = new Hyperlink();
+                        sourceLink.Inlines.Add(lyricsURLs[indx].source);
+                        sourceLink.Foreground = new SolidColorBrush(Colors.Gray);
+                        sourceLink.NavigateUri = new Uri(lyricsURLs[indx].url);
+                        sourceLink.RequestNavigate += Hyperlink_RequestNavigate;
+                        sourceLabel.Inlines.Add(sourceLink);
+
+                        var coverImg = "";
+                        switch (lyricsURLs[indx].source)
+                        {
+                            case "Musixmatch":
+                                lyricsText = mmAPI.setLyrics(indx, ref lyricsURLs, ref coverImg);
+                                break;
+                            case "Genius":
+                                await geniusAPI.setLyrics(indx);
+                                coverImg = lyricsURLs[indx].img;
+                                break;
+                        }
+
+                        if (coverImg != "")
+                        {
+                            BitmapImage cover = new BitmapImage();
+                            cover.BeginInit();
+                            cover.UriSource = new Uri(coverImg);
+                            cover.EndInit();
+                            coverImage.Source = cover;
+                            coverImage.Visibility = Visibility.Visible;
+                        }
+                        else if (coverImage.Visibility == Visibility.Visible)
+                        {
+                            coverImage.Visibility = Visibility.Collapsed;
+                        }
+
+                        if (lyricsText.Trim().Length > 0)
+                        {
+                            clearLyricsView();
+                            addToLyricsView(lyricsText);
+                        }
+                        else
+                        {
+                            clearLyricsView();
+                            sourceLabel.Text = "";
+                            coverImage.Visibility = Visibility.Collapsed;
+                            addToLyricsView("I can't find the lyrics, sorry. :(");
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
                         clearLyricsView();
                         sourceLabel.Text = "";
                         coverImage.Visibility = Visibility.Collapsed;
                         addToLyricsView("I can't find the lyrics, sorry. :(");
                     }
-                }
-                catch (Exception ex)
-                {
-                    clearLyricsView();
-                    sourceLabel.Text = "";
-                    coverImage.Visibility = Visibility.Collapsed;
-                    addToLyricsView("I can't find the lyrics, sorry. :(");
-                }
 
-                isDownloading = false;
-                if (lyricsURLs.Count > 1) setBtnStatus(true);
+                    isDownloading = false;
+                    if (lyricsURLs.Count > 1) setBtnStatus(true);
+                }
             }
+            catch (Exception ex) { }
         }
 
         public static string getHTTPSRequest(string strRequest)
@@ -574,7 +582,8 @@ namespace Spotify_Lyrics.NET
         private void BoldFontBtn_Click(object sender, RoutedEventArgs e)
         {
             // Save bold font status
-            if (settingsLoaded) {
+            if (settingsLoaded)
+            {
                 if (Properties.Settings.Default.boldFont)
                 {
                     boldFontBtnText.Foreground = textColor2;
