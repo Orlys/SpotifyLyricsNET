@@ -27,7 +27,7 @@ Download the latest version from the [Releases](https://github.com/JakubSteplows
 > Notes:<br>
 > Date format: DD/MM/YYYY
 
->v1.3.0 (08/08/2019):
+>v1.3.0 (08/08/2019): <-- THIS RELEASE HAS BEEN REMOVED (need improvements)
 >- Improved lyrics fetching
 >- Search of the first available lyrics (check them all until find one, not only the first 3)
 >- All the lyrics are checked in background (no more empty lyrics after clicking on "NEXT")
