@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.4.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Release\
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.4.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x86\Debug\
 Spotify_Lyrics.NET
 none
 false
-TRACE
+DEBUG;TRACE
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.4.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\App.xaml
-2-1571593986
+11151548125
 
-91976637042
+8-1301944689
 89-1367839554
-Dialog.xaml;MainWindow.xaml;
+MainWindow.xaml;
 
-False
+True
 
