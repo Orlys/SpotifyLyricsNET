@@ -17,12 +17,18 @@ namespace Spotify_Lyrics.NET.API
             public int major;
             public int minor;
             public int patch;
+            public bool stable;
+            public bool alpha;
+            public bool beta;
 
-            public version(int maj, int min, int pat)
+            public version(int maj, int min, int pat, bool s, bool a, bool b)
             {
                 major = maj;
                 minor = min;
                 patch = pat;
+                stable = s;
+                alpha = a;
+                beta = b;
             }
         }
 
@@ -48,18 +54,23 @@ namespace Spotify_Lyrics.NET.API
             if (v1.major > v2.major) return true;
             if (v1.minor > v2.minor) return true;
             if (v1.patch > v2.patch) return true;
+            if (v1.stable && !v2.stable) return true;
+            if (v1.beta && v2.alpha) return true;
             return false;
         }
 
         private version stringToVersion(string version)
         {
-            version v = new version(0, 0, 0);
+            version v = new version(0, 0, 0, true, false, false);
 
             try
             {
                 string[] vArr = version.Split('.');
                 if (vArr.Count() == 3)
                 {
+                    v.alpha = vArr[2].Contains("-alpha");
+                    v.beta = vArr[2].Contains("-beta") && !v.alpha;
+                    v.stable = !v.alpha && !v.beta;
                     v.major = int.Parse(vArr[0].Replace("v", ""));
                     v.minor = int.Parse(vArr[1]);
                     v.patch = int.Parse(vArr[2].Replace("-alpha", "").Replace("-beta", ""));
