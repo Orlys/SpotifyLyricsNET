@@ -75,7 +75,7 @@ namespace Spotify_Lyrics.NET.API
                 {
                     try
                     {
-                        lyricsText += p.InnerText + Environment.NewLine;
+                        lyricsText += p.InnerText.Replace("&amp;", "&") + Environment.NewLine;
                     }
                     catch (Exception ex)
                     {

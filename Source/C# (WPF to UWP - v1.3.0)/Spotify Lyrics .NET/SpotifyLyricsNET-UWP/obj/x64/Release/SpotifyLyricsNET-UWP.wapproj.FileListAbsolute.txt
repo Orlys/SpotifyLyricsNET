@@ -526,3 +526,6 @@ D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spoti
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x64\Release\Upload.Symbols\Spotify_Lyrics.NET.pdb
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x64\Release\_pkginfo.txt
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x64\Release\_installerinfo.log
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x64\Release\SpotifyLyricsNET-UWP_1.3.0.0_x64.appx
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x64\Release\Symbols\HtmlAgilityPack.pdb
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.3.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\obj\x64\Release\Symbols\Spotify_Lyrics.NET.pdb
