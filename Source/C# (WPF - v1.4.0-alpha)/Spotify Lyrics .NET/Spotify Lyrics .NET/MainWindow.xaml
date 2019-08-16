@@ -222,8 +222,6 @@
 
                     <Grid Grid.Row="0" VerticalAlignment="Bottom">
                         <TextBlock x:Name="topModeBtnText" Style="{DynamicResource IconFont}" Text="" Margin="0,0,0,2" FontSize="10" Foreground="#8d8d8d"/>
-                        <!-- pin  -->
-                        <!-- unpin  -->
                     </Grid>
 
                     <Ellipse x:Name="topModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#1db954" Canvas.Left="12" Canvas.Top="25"/>

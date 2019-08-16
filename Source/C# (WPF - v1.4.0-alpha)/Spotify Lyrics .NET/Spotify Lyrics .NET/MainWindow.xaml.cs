@@ -83,7 +83,6 @@ namespace Spotify_Lyrics.NET
             this.Topmost = Properties.Settings.Default.topMost;
             if (Properties.Settings.Default.topMost)
             {
-                topModeBtnText.Text = "";
                 topModeBtnText.Foreground = spotifyGreen;
                 topModeBtnFlag.Visibility = Visibility.Visible;
                 topModeBtn.ToolTip = "Disable \"Always on Top\"";
@@ -688,7 +687,6 @@ namespace Spotify_Lyrics.NET
             {
                 if (Properties.Settings.Default.topMost)
                 {
-                    topModeBtnText.Text = "";
                     topModeBtnText.Foreground = textColor2;
                     topModeBtnFlag.Visibility = Visibility.Collapsed;
                     topModeBtn.ToolTip = "Enable \"Always on Top\"";
@@ -696,7 +694,6 @@ namespace Spotify_Lyrics.NET
                 }
                 else
                 {
-                    topModeBtnText.Text = "";
                     topModeBtnText.Foreground = spotifyGreen;
                     topModeBtnFlag.Visibility = Visibility.Visible;
                     topModeBtn.ToolTip = "Disable \"Always on Top\"";
