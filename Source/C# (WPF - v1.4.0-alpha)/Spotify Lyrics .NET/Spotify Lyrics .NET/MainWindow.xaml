@@ -102,7 +102,7 @@
         <!-- Body -->
         <Grid x:Name="bodyGrid" Grid.Row="3" Background="#181818">
             <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">
-                <ListView Padding="0,20" x:Name="lyricsView" Background="Transparent" BorderThickness="0"/>
+                <ListView Padding="0,10,0,0" x:Name="lyricsView" Background="Transparent" BorderThickness="0"/>
             </ScrollViewer>
 
             <Grid Height="20" Margin="0,0,17,0" VerticalAlignment="Top">
@@ -141,15 +141,15 @@
             <Button x:Name="boldFontBtn" Grid.Column="1" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Enable &quot;Bold font&quot;" Click="BoldFontBtn_Click">
                 <Grid VerticalAlignment="Center" Margin="10,8,10,10">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="19"/>
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0" VerticalAlignment="Bottom">
                         <TextBlock x:Name="boldFontBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="14" Foreground="#8d8d8d"/>
                     </Grid>
 
-                    <Ellipse x:Name="boldFontBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="5" Height="5" VerticalAlignment="Bottom" Margin="0,0,0,4" Fill="#1db954" Canvas.Left="12" Canvas.Top="25" />
+                    <Ellipse x:Name="boldFontBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#1db954" Canvas.Left="12" Canvas.Top="25" />
                 </Grid>
             </Button>
 
@@ -157,7 +157,7 @@
                 <!-- Text formatting -->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
-                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="19"/>
                 </Grid.RowDefinitions>
                 
                 <Grid Grid.Row="0">
@@ -169,7 +169,7 @@
                     <Button x:Name="biggerFontBtn" Grid.Column="0" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Increase font size" Click="BiggerFontBtn_Click">
                         <Grid VerticalAlignment="Center" Margin="10,8,10,10">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="25"/>
                             </Grid.RowDefinitions>
 
                             <Grid Grid.Row="0" VerticalAlignment="Bottom">
@@ -181,7 +181,7 @@
                     <Button x:Name="smallerFontBtn" Grid.Column="1" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Decrease font size" Click="SmallerFontBtn_Click">
                         <Grid VerticalAlignment="Center" Margin="10,8,10,10">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="25"/>
                             </Grid.RowDefinitions>
 
                             <Grid Grid.Row="0" VerticalAlignment="Bottom">
@@ -192,7 +192,7 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <TextBlock x:Name="fontSizeText" Style="{DynamicResource BoldFont}" Text="" Margin="0,-3,0,0" TextAlignment="Center" FontSize="10" Foreground="#8d8d8d" Opacity="0.8"/>
+                    <TextBlock x:Name="fontSizeText" Style="{DynamicResource BoldFont}" Text="" Margin="0,-8,0,0" TextAlignment="Center" FontSize="10" Foreground="#8d8d8d" Opacity="0.8"/>
                 </Grid>
             </Grid>
 
@@ -200,15 +200,15 @@
                 <Grid VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,8,10,10">
                     <!-- Dark theme -->
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="19"/>
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0" VerticalAlignment="Bottom">
                         <TextBlock x:Name="darkModeBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="16" Foreground="#8d8d8d"/>
                     </Grid>
 
-                    <Ellipse x:Name="darkModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="5" Height="5" VerticalAlignment="Bottom" Margin="0,0,0,4" Fill="#1db954" Canvas.Left="12" Canvas.Top="25" />
+                    <Ellipse x:Name="darkModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#1db954" Canvas.Left="12" Canvas.Top="25" />
                 </Grid>
             </Button>
 
@@ -216,8 +216,8 @@
                 <Grid VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,8,18,10">
                     <!-- Always on Top -->
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="19"/>
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0" VerticalAlignment="Bottom">
@@ -226,7 +226,7 @@
                         <!-- unpin  -->
                     </Grid>
 
-                    <Ellipse x:Name="topModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="5" Height="5" VerticalAlignment="Bottom" Margin="0,0,0,4" Fill="#1db954" Canvas.Left="12" Canvas.Top="25"/>
+                    <Ellipse x:Name="topModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#1db954" Canvas.Left="12" Canvas.Top="25"/>
                 </Grid>
             </Button>
         </Grid>

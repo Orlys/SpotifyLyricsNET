@@ -233,35 +233,7 @@
     <Resource Include="SpotifyLyricsNET-logo-v1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settings-white.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\spotify-lyrics-net-v1-2.ttf" />
-    <None Include="Resources\theme0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\theme1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fav.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fav-white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\no.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\no-white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.5.0.0\build\Fody.targets" Condition="Exists('..\packages\Fody.5.0.0\build\Fody.targets')" />
