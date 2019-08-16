@@ -274,7 +274,7 @@ namespace Spotify_Lyrics.NET
             Grid lGrid = new Grid();
             lGrid.Width = this.Width - 50;
             TextBlock lString = new TextBlock();
-            lString.Style = Properties.Settings.Default.boldFont ? (Style)this.Resources["BoldFont"] : (Style)this.Resources["BookFont"];
+            lString.Style = Properties.Settings.Default.boldFont ? (Style)Application.Current.FindResource("BoldFont") : (Style)Application.Current.FindResource("BookFont");
             lString.Foreground = textColor;
             lString.FontSize = Properties.Settings.Default.textSize;
             lString.FontStretch = FontStretches.UltraExpanded;
@@ -612,7 +612,7 @@ namespace Spotify_Lyrics.NET
             {
                 Grid g = (Grid)s.Content;
                 TextBlock t = (TextBlock)g.Children[0];
-                t.Style = Properties.Settings.Default.boldFont ? (Style)this.Resources["BoldFont"] : (Style)this.Resources["BookFont"];
+                t.Style = Properties.Settings.Default.boldFont ? (Style)Application.Current.FindResource("BoldFont") : (Style)Application.Current.FindResource("BookFont");
                 t.FontSize = Properties.Settings.Default.textSize;
             }
         }
