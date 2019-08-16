@@ -21,7 +21,7 @@ namespace Spotify_Lyrics.NET
     public partial class MainWindow : Window
     {
         const string appVERSION = "v1.4.0-alpha";
-        const string appBUILD = "09.08.2019"; // DD.MM.YYYY
+        const string appBUILD = "17.08.2019"; // DD.MM.YYYY
         const string appAuthor = "Jakub Stęplowski";
         const string appAuthorWebsite = "https://jakubsteplowski.com";
 
@@ -51,7 +51,7 @@ namespace Spotify_Lyrics.NET
         private SolidColorBrush bgColor2 = new SolidColorBrush();
         private SolidColorBrush textColor = new SolidColorBrush();
         private SolidColorBrush textColor2 = new SolidColorBrush();
-        private SolidColorBrush spotifyGreen = new SolidColorBrush(Color.FromRgb(29, 185, 84));
+        private SolidColorBrush spotifyGreen = new SolidColorBrush(Color.FromRgb(57, 184, 91));
 
         private UpdateHelper updateH;
         private MusixmatchAPI mmAPI = new MusixmatchAPI();

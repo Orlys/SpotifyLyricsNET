@@ -60,3 +60,4 @@ D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.4.0-alpha)\Spotif
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.4.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Spotify_Lyrics.NET.pdb
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.4.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Dialog.baml
 D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.4.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\Dialog.g.cs
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF - v1.4.0-alpha)\Spotify Lyrics .NET\Spotify Lyrics .NET\obj\x64\Debug\App.baml

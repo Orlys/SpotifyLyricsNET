@@ -51,12 +51,13 @@ namespace Spotify_Lyrics.NET.API
 
         private bool isFirstNewer(version v1, version v2)
         {
-            if (v1.major > v2.major) return true;
-            if (v1.minor > v2.minor) return true;
-            if (v1.patch > v2.patch) return true;
-            if (v1.stable && !v2.stable) return true;
-            if (v1.beta && v2.alpha) return true;
-            return false;
+            if (v2.Equals(v1)) return false;
+            if (v2.major > v1.major) return false;
+            if (v2.minor > v1.minor) return false;
+            if (v2.patch > v1.patch) return false;
+            if (v2.alpha) return false;
+            if (v2.beta && !v1.alpha) return false;
+            return true;
         }
 
         private version stringToVersion(string version)
