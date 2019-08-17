@@ -264,7 +264,7 @@ namespace Spotify_Lyrics.NET
             ((ScrollViewer)lyricsView.Parent).ScrollToTop();
         }
 
-        private void addToLyricsView(string s)
+        private void addToLyricsView(string s, bool error = false)
         {
             ListViewItem lContainer = new ListViewItem();
             lContainer.IsEnabled = false;
@@ -282,6 +282,18 @@ namespace Spotify_Lyrics.NET
             lString.Text = s;
             lString.TextWrapping = TextWrapping.WrapWithOverflow;
             lString.Padding = new Thickness(20, 0, 20, 0);
+
+            if (error)
+            {
+                lString.Text = "I can't find the lyrics, sorry.";
+                lString.LineHeight = 30;
+                Run emoji = new Run();
+                emoji.Style = (Style)Application.Current.FindResource("IconFont");
+                emoji.FontSize = Properties.Settings.Default.textSize + 40;
+                emoji.Text = ""; // Sad1: , Sad2: 
+                lString.Inlines.Add(new LineBreak());
+                lString.Inlines.Add(emoji);
+            }
 
             lGrid.Children.Add(lString);
             lContainer.Content = lGrid;
@@ -372,7 +384,7 @@ namespace Spotify_Lyrics.NET
                 clearLyricsView();
                 sourceLabel.Text = "";
                 coverImage.Visibility = Visibility.Collapsed;
-                addToLyricsView("I can't find the lyrics, sorry. :(");
+                addToLyricsView("", true); // Error: Can't find the lyrics
                 countLabel.Text = "0 of 0";
             }
         }
@@ -528,7 +540,7 @@ namespace Spotify_Lyrics.NET
                             clearLyricsView();
                             sourceLabel.Text = "";
                             coverImage.Visibility = Visibility.Collapsed;
-                            addToLyricsView("I can't find the lyrics, sorry. :(");
+                            addToLyricsView("", true); // Error: Can't find the lyrics
                         }
                     }
                     catch (Exception ex)
@@ -536,7 +548,7 @@ namespace Spotify_Lyrics.NET
                         clearLyricsView();
                         sourceLabel.Text = "";
                         coverImage.Visibility = Visibility.Collapsed;
-                        addToLyricsView("I can't find the lyrics, sorry. :(");
+                        addToLyricsView("", true); // Error: Can't find the lyrics
                     }
 
                     isDownloading = false;

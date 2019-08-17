@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'spotify-lyrics-net-v1-4';
+  src:
+    url('fonts/spotify-lyrics-net-v1-4.ttf?3opr4p') format('truetype'),
+    url('fonts/spotify-lyrics-net-v1-4.woff?3opr4p') format('woff'),
+    url('fonts/spotify-lyrics-net-v1-4.svg?3opr4p#spotify-lyrics-net-v1-4') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'spotify-lyrics-net-v1-4' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-checkmark1:before {
+  content: "\e90b";
+}
+.icon-checkmark1bold:before {
+  content: "\e90c";
+}
+.icon-checkmark2:before {
+  content: "\e90d";
+}
+.icon-checkmark2bold:before {
+  content: "\e90e";
+}
+.icon-checkmark3:before {
+  content: "\e90f";
+}
+.icon-checkmark3bold:before {
+  content: "\e910";
+}
+.icon-sad:before {
+  content: "\e911";
+}
+.icon-sad2:before {
+  content: "\e912";
+}
+.icon-bold:before {
+  content: "\e900";
+}
+.icon-day:before {
+  content: "\e901";
+}
+.icon-daybold:before {
+  content: "\e902";
+}
+.icon-fontdown:before {
+  content: "\e903";
+}
+.icon-fontup:before {
+  content: "\e904";
+}
+.icon-night:before {
+  content: "\e905";
+}
+.icon-nightbold:before {
+  content: "\e906";
+}
+.icon-pin:before {
+  content: "\e907";
+}
+.icon-pinbold:before {
+  content: "\e908";
+}
+.icon-unpin:before {
+  content: "\e909";
+}
+.icon-unpinbold:before {
+  content: "\e90a";
+}

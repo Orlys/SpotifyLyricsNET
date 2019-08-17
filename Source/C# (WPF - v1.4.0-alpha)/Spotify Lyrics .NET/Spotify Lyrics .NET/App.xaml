@@ -255,7 +255,7 @@
             <Setter Property="TextElement.FontFamily" Value="Resources/#Circular Medium" />
         </Style>
         <Style x:Key="IconFont">
-            <Setter Property="TextElement.FontFamily" Value="Resources/#spotify-lyrics-net-v1-2" />
+            <Setter Property="TextElement.FontFamily" Value="Resources/#spotify-lyrics-net-v1-4" />
         </Style>
     </Application.Resources>
 </Application>
