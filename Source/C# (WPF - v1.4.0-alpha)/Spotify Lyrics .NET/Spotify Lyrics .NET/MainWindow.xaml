@@ -102,7 +102,7 @@
 
             <Grid x:Name="correctMarkDescription" Visibility="Collapsed" Grid.Column="3" Margin="10,0,20,0" VerticalAlignment="Center">
                 <TextBlock x:Name="correctMarkDescriptionLabel" Style="{DynamicResource BoldFont}" Foreground="#FFF" FontSize="12" TextAlignment="Left" TextWrapping="Wrap">
-                    <Run Text="This lyrics has been marked as correct."/>
+                    <Run Text="These lyrics have been marked as correct."/>
                     <LineBreak/>
                     <Run Text="Remove the mark to search for others."/>
                 </TextBlock>

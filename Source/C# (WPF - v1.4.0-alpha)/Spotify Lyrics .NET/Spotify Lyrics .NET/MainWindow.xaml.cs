@@ -19,8 +19,8 @@ namespace Spotify_Lyrics.NET
     /// </summary>
     public partial class MainWindow : Window
     {
-        const string appVERSION = "v1.4.0-alpha";
-        const string appBUILD = "19.08.2019"; // DD.MM.YYYY
+        const string appVERSION = "v1.4.0";
+        const string appBUILD = "20.08.2019"; // DD.MM.YYYY
         const string appAuthor = "Jakub Stęplowski";
         const string appAuthorWebsite = "https://jakubsteplowski.com";
 
@@ -342,9 +342,18 @@ namespace Spotify_Lyrics.NET
                                    currentSongLyricsCoverImg = currentSongLyrics[1],
                                    currentSongLyricsUrl = currentSongLyrics[2];
 
-                            if (currentSongLyricsId.Length > 0 && Uri.IsWellFormedUriString(currentSongLyricsId, UriKind.Absolute))
+                            if (currentSongLyricsUrl.Length > 0 && Uri.IsWellFormedUriString(currentSongLyricsUrl, UriKind.Absolute))
                             {
                                 isMarked = true;
+
+                                setBtnStatus(false);
+                                clearLyricsView();
+                                coverImage.Visibility = Visibility.Collapsed;
+                                sourceLabel.Text = "";
+                                countLabel.Text = "...";
+                                addToLyricsView("Searching...");
+
+                                lyricsURLs = new List<lyricsURL>();
 
                                 correctMarkDescription.Visibility = Visibility.Visible;
                                 navigationGrid.Visibility = Visibility.Collapsed;
@@ -352,13 +361,13 @@ namespace Spotify_Lyrics.NET
                                 correctMarkBtnFlag.Visibility = Visibility.Visible;
                                 correctMarkBtn.ToolTip = "Remove \"Correct Lyrics\" mark";
 
-                                if (currentSongLyricsId.Contains("musixmatch"))
+                                if (currentSongLyricsUrl.Contains("musixmatch"))
                                 {
-                                    mmAPI.getLyrics("", "", ref lyricsURLs, currentSongLyricsId);
+                                    mmAPI.getLyrics("", "", ref lyricsURLs, currentSongLyricsUrl);
                                 }
                                 else
                                 {
-                                    await geniusAPI.getLyrics("", "", currentSongLyricsId, currentSongLyricsCoverImg, currentSongLyricsId);
+                                    await geniusAPI.getLyrics("", "", currentSongLyricsUrl, currentSongLyricsCoverImg, currentSongLyricsId);
                                 }
 
                                 if (lyricsURLs.Count > 0)
@@ -776,6 +785,8 @@ namespace Spotify_Lyrics.NET
                 {
                     if (filesysH.removeLyrics(currentSongTitle))
                     {
+                        correctMarkDescription.Visibility = Visibility.Collapsed;
+                        navigationGrid.Visibility = Visibility.Visible;
                         correctMarkBtnText.Foreground = textColor2;
                         correctMarkBtnFlag.Visibility = Visibility.Collapsed;
                         correctMarkBtn.ToolTip = "Mark as \"Correct Lyrics\"";
@@ -786,6 +797,8 @@ namespace Spotify_Lyrics.NET
                 {
                     if (filesysH.saveLyrics(currentSongTitle, lyricsURLs[currentLyricsIndx].id, lyricsURLs[currentLyricsIndx].img, lyricsURLs[currentLyricsIndx].url))
                     {
+                        correctMarkDescription.Visibility = Visibility.Visible;
+                        navigationGrid.Visibility = Visibility.Collapsed;
                         correctMarkBtnText.Foreground = spotifyGreen;
                         correctMarkBtnFlag.Visibility = Visibility.Visible;
                         correctMarkBtn.ToolTip = "Remove \"Correct Lyrics\" mark";

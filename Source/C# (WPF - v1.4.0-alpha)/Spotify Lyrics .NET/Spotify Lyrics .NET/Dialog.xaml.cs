@@ -11,7 +11,7 @@ namespace Spotify_Lyrics.NET
         {
             InitializeComponent();
 
-            this.dialogTitle.Text = version + " is now available!";
+            this.dialogTitle.Text = version.Trim().Replace("\n", "") + " is now available!";
             newVersion = version;
             loadTheme(Properties.Settings.Default.theme);
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Cache;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -88,6 +89,8 @@ namespace Spotify_Lyrics.NET.API
             {
                 WebRequest ThisRequest = WebRequest.Create(strRequest);
                 ThisRequest.ContentType = "application/x-www-form-urlencoded";
+                HttpRequestCachePolicy noCachePolicy = new HttpRequestCachePolicy(HttpRequestCacheLevel.NoCacheNoStore);
+                ThisRequest.CachePolicy = noCachePolicy;
                 ThisRequest.Method = "GET";
 
                 System.Text.ASCIIEncoding Encoder = new System.Text.ASCIIEncoding();

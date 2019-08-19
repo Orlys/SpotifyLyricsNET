@@ -80,21 +80,24 @@ namespace Spotify_Lyrics.NET.API
         {
             try
             {
+                title = title.ToLower().Trim();
+
                 checkLocalResources();
                 string[] lyricsList = File.ReadAllLines(localResourcesData);
-                string lyricsListTemp = "";
+                List<string> lyricsListTemp = new List<string>();
                 foreach (string ly in lyricsList)
                 {
                     if (ly.Contains("="))
                     {
                         string t = ly.Substring(0, ly.IndexOf("=")).ToLower().Trim();
 
-                        if (t != title) lyricsListTemp += ly;
+                        if (t != title) lyricsListTemp.Add(ly);
                     }
                     else break;
                 }
 
-                File.WriteAllText(localResourcesData, lyricsListTemp);
+                File.Delete(localResourcesData);
+                File.WriteAllLines(localResourcesData, lyricsListTemp);
 
                 return true;
             }
