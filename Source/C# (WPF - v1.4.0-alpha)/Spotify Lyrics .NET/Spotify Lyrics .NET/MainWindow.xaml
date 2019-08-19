@@ -46,6 +46,7 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
@@ -73,12 +74,46 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Column="2" Margin="20,0" VerticalAlignment="Center">
+            <Grid Grid.Column="2" Margin="10,0,0,0" VerticalAlignment="Center">
+                <!-- Mark as correct -->
+                <Button x:Name="correctMarkBtn" Background="Transparent" BorderThickness="0" Style="{DynamicResource TransparentButton}" ToolTip="Mark as &quot;Correct Lyrics&quot;" Click="CorrectMarkBtn_Click">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="19"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" VerticalAlignment="Bottom">
+                            <TextBlock x:Name="correctMarkBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="24" Foreground="#8d8d8d"/>
+                            <!--
+                            Checkmark icon 1: 
+                            Checkmark icon 2: 
+                            Checkmark icon 3: 
+                            Checkmark icon 4: 
+                            Checkmark icon 5: 
+                            Checkmark icon 6: 
+                        -->
+                        </Grid>
+
+                        <Ellipse x:Name="correctMarkBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#39b85b" Canvas.Left="12" Canvas.Top="25" />
+                    </Grid>
+                </Button>
+            </Grid>
+
+            <Grid x:Name="correctMarkDescription" Visibility="Collapsed" Grid.Column="3" Margin="10,0,20,0" VerticalAlignment="Center">
+                <TextBlock x:Name="correctMarkDescriptionLabel" Style="{DynamicResource BoldFont}" Foreground="#FFF" FontSize="12" TextAlignment="Left" TextWrapping="Wrap">
+                    <Run Text="This lyrics has been marked as correct."/>
+                    <LineBreak/>
+                    <Run Text="Remove the mark to search for others."/>
+                </TextBlock>
+            </Grid>
+
+            <Grid x:Name="navigationGrid" Grid.Column="3" Margin="10,0,20,0" VerticalAlignment="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-
+                
                 <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
@@ -149,7 +184,7 @@
                         <TextBlock x:Name="boldFontBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="14" Foreground="#8d8d8d"/>
                     </Grid>
 
-                    <Ellipse x:Name="boldFontBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#1db954" Canvas.Left="12" Canvas.Top="25" />
+                    <Ellipse x:Name="boldFontBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#39b85b" Canvas.Left="12" Canvas.Top="25" />
                 </Grid>
             </Button>
 
@@ -208,7 +243,7 @@
                         <TextBlock x:Name="darkModeBtnText" Style="{DynamicResource IconFont}" Text="" FontSize="16" Foreground="#8d8d8d"/>
                     </Grid>
 
-                    <Ellipse x:Name="darkModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#1db954" Canvas.Left="12" Canvas.Top="25" />
+                    <Ellipse x:Name="darkModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#39b85b" Canvas.Left="12" Canvas.Top="25" />
                 </Grid>
             </Button>
 
@@ -224,7 +259,7 @@
                         <TextBlock x:Name="topModeBtnText" Style="{DynamicResource IconFont}" Text="" Margin="0,0,0,2" FontSize="10" Foreground="#8d8d8d"/>
                     </Grid>
 
-                    <Ellipse x:Name="topModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#1db954" Canvas.Left="12" Canvas.Top="25"/>
+                    <Ellipse x:Name="topModeBtnFlag" Visibility="Collapsed" Grid.Row="1" Width="4" Height="4" VerticalAlignment="Bottom" Margin="0,0,0,8" Fill="#39b85b" Canvas.Left="12" Canvas.Top="25"/>
                 </Grid>
             </Button>
         </Grid>

@@ -11,33 +11,48 @@ namespace Spotify_Lyrics.NET.API
 {
     class MusixmatchAPI
     {
-        public void getLyrics(string artist, string song, ref List<MainWindow.lyricsURL> lyricsURLs)
+        public void getLyrics(string artist, string song, ref List<MainWindow.lyricsURL> lyricsURLs, string lyricsURL = "")
         {
-            // Search the song on Musixmatch
-            string searchURL = "https://www.musixmatch.com/search/" + Uri.EscapeDataString(artist) + "-" + Uri.EscapeDataString(song) + "/tracks";
-            string response = getHTTPSRequest(searchURL);
-            response = response.Replace("\"", "'");
-
-            // Save all the valid search results
-            while (response.Contains("href='/lyrics/"))
+            if (lyricsURL.Length == 0)
             {
-                try
-                {
-                    int a = response.IndexOf("href='/lyrics/");
-                    int b = response.IndexOf("'>", a);
-                    string link = response.Substring(a, b - a).Replace("href='", "");
+                // Search the song on Musixmatch
+                string searchURL = "https://www.musixmatch.com/search/" + Uri.EscapeDataString(artist) + "-" + Uri.EscapeDataString(song) + "/tracks";
+                string response = getHTTPSRequest(searchURL);
+                response = response.Replace("\"", "'");
 
-                    MainWindow.lyricsURL lyricsObj = new MainWindow.lyricsURL();
-                    lyricsObj.url = "https://www.musixmatch.com" + link;
-                    lyricsObj.source = "Musixmatch";
-
-                    lyricsURLs.Add(lyricsObj);
-                    response = response.Substring(b, response.Length - b);
-                }
-                catch (Exception ex)
+                // Save all the valid search results
+                while (response.Contains("href='/lyrics/"))
                 {
-                    break;
+                    try
+                    {
+                        int a = response.IndexOf("href='/lyrics/");
+                        int b = response.IndexOf("'>", a);
+                        string link = response.Substring(a, b - a).Replace("href='", "");
+
+                        MainWindow.lyricsURL lyricsObj = new MainWindow.lyricsURL();
+                        lyricsObj.id = "";
+                        lyricsObj.img = "";
+                        lyricsObj.url = "https://www.musixmatch.com" + link;
+                        lyricsObj.source = "Musixmatch";
+
+                        lyricsURLs.Add(lyricsObj);
+                        response = response.Substring(b, response.Length - b);
+                    }
+                    catch (Exception ex)
+                    {
+                        break;
+                    }
                 }
+            }
+            else
+            {
+                MainWindow.lyricsURL lyricsObj = new MainWindow.lyricsURL();
+                lyricsObj.id = "";
+                lyricsObj.img = "";
+                lyricsObj.url = lyricsURL;
+                lyricsObj.source = "Musixmatch";
+
+                lyricsURLs.Add(lyricsObj);
             }
         }
 

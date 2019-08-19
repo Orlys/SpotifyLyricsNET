@@ -1,5 +1,4 @@
-﻿using HtmlAgilityPack;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -21,7 +20,7 @@ namespace Spotify_Lyrics.NET
     public partial class MainWindow : Window
     {
         const string appVERSION = "v1.4.0-alpha";
-        const string appBUILD = "17.08.2019"; // DD.MM.YYYY
+        const string appBUILD = "19.08.2019"; // DD.MM.YYYY
         const string appAuthor = "Jakub Stęplowski";
         const string appAuthorWebsite = "https://jakubsteplowski.com";
 
@@ -46,6 +45,8 @@ namespace Spotify_Lyrics.NET
         public string lyricsText = "";
         public string lyricsTextTemp = "";
         private bool isDownloading = false;
+        private bool isMarked = false; // local
+        private bool isMarkedFlag = false; // runtime
 
         private SolidColorBrush bgColor = new SolidColorBrush();
         private SolidColorBrush bgColor2 = new SolidColorBrush();
@@ -54,6 +55,7 @@ namespace Spotify_Lyrics.NET
         private SolidColorBrush spotifyGreen = new SolidColorBrush(Color.FromRgb(57, 184, 91));
 
         private UpdateHelper updateH;
+        private FileSystemHelper filesysH = new FileSystemHelper();
         private MusixmatchAPI mmAPI = new MusixmatchAPI();
         private GeniusAPI geniusAPI;
 
@@ -159,6 +161,7 @@ namespace Spotify_Lyrics.NET
             footerGrid.Background = bgColor;
             songTitleLabel.Foreground = textColor;
             artistLabel.Foreground = textColor2;
+            correctMarkDescriptionLabel.Foreground = textColor;
             versionLabel.Foreground = textColor2;
             smallerFontBtnText.Foreground = textColor2;
             biggerFontBtnText.Foreground = textColor2;
@@ -185,17 +188,6 @@ namespace Spotify_Lyrics.NET
             Properties.Settings.Default.theme = themeID;
             Properties.Settings.Default.Save();
         }
-
-        // Offline lyrics - TODO
-        //private void checkOfflineDir()
-        //{
-        //    var offlinePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\SpotifyLyrics.NET\\Offline\\Lyrics\\";
-
-        //    if (!Directory.Exists(offlinePath))
-        //    {
-        //        Directory.CreateDirectory(offlinePath);
-        //    }
-        //}
 
         private void MainWindow_SizeChanged(object sender, EventArgs e)
         {
@@ -319,9 +311,9 @@ namespace Spotify_Lyrics.NET
             }
         }
 
-        private void setSong(string title)
+        private async void setSong(string title, bool bypass = false)
         {
-            if (!title.Contains("Spotify") && title != currentSongTitle)
+            if ((!title.Contains("Spotify") && title != currentSongTitle) || (bypass))
             {
                 currentSongTitle = title;
 
@@ -330,10 +322,64 @@ namespace Spotify_Lyrics.NET
                     string artist = title.Substring(0, title.IndexOf(" -"));
                     string songTitle = title.Replace(artist + " - ", "");
 
+                    isMarked = false;
+                    correctMarkDescription.Visibility = Visibility.Collapsed;
+                    navigationGrid.Visibility = Visibility.Visible;
+                    correctMarkBtnText.Foreground = textColor2;
+                    correctMarkBtnFlag.Visibility = Visibility.Collapsed;
+                    correctMarkBtn.ToolTip = "Mark as \"Correct Lyrics\"";
+
                     songTitleLabel.Text = songTitle; //.Replace("&", "&&");
                     songTitleLabel.ToolTip = songTitle;
                     artistLabel.Text = artist;
-                    getLyrics(artist.Trim(), songTitle.Replace("&", "").Trim());
+
+                    if (!bypass)
+                    {
+                        try
+                        {
+                            List<string> currentSongLyrics = filesysH.getLyrics(currentSongTitle);
+                            string currentSongLyricsId = currentSongLyrics[0],
+                                   currentSongLyricsCoverImg = currentSongLyrics[1],
+                                   currentSongLyricsUrl = currentSongLyrics[2];
+
+                            if (currentSongLyricsId.Length > 0 && Uri.IsWellFormedUriString(currentSongLyricsId, UriKind.Absolute))
+                            {
+                                isMarked = true;
+
+                                correctMarkDescription.Visibility = Visibility.Visible;
+                                navigationGrid.Visibility = Visibility.Collapsed;
+                                correctMarkBtnText.Foreground = spotifyGreen;
+                                correctMarkBtnFlag.Visibility = Visibility.Visible;
+                                correctMarkBtn.ToolTip = "Remove \"Correct Lyrics\" mark";
+
+                                if (currentSongLyricsId.Contains("musixmatch"))
+                                {
+                                    mmAPI.getLyrics("", "", ref lyricsURLs, currentSongLyricsId);
+                                }
+                                else
+                                {
+                                    await geniusAPI.getLyrics("", "", currentSongLyricsId, currentSongLyricsCoverImg, currentSongLyricsId);
+                                }
+
+                                if (lyricsURLs.Count > 0)
+                                {
+                                    setLyrics(0);
+                                }
+                                else
+                                {
+                                    clearLyricsView();
+                                    sourceLabel.Text = "";
+                                    coverImage.Visibility = Visibility.Collapsed;
+                                    addToLyricsView("", true); // Error: Can't find the lyrics
+                                    countLabel.Text = "0 of 0";
+                                }
+                            }
+                        }
+                        catch (Exception ex) { }
+                    }
+
+                    if (!isMarked)
+                        getLyrics(artist.Trim(), songTitle.Replace("&", "").Trim());
                 }
             }
         }
@@ -714,6 +760,38 @@ namespace Spotify_Lyrics.NET
                 Properties.Settings.Default.Save();
 
                 this.Topmost = Properties.Settings.Default.topMost;
+            }
+        }
+
+        private void CorrectMarkBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (isMarked)
+            {
+                filesysH.removeLyrics(currentSongTitle);
+                setSong(currentSongTitle, true);
+            }
+            else
+            {
+                if (isMarkedFlag)
+                {
+                    if (filesysH.removeLyrics(currentSongTitle))
+                    {
+                        correctMarkBtnText.Foreground = textColor2;
+                        correctMarkBtnFlag.Visibility = Visibility.Collapsed;
+                        correctMarkBtn.ToolTip = "Mark as \"Correct Lyrics\"";
+                        isMarkedFlag = false;
+                    }
+                }
+                else
+                {
+                    if (filesysH.saveLyrics(currentSongTitle, lyricsURLs[currentLyricsIndx].id, lyricsURLs[currentLyricsIndx].img, lyricsURLs[currentLyricsIndx].url))
+                    {
+                        correctMarkBtnText.Foreground = spotifyGreen;
+                        correctMarkBtnFlag.Visibility = Visibility.Visible;
+                        correctMarkBtn.ToolTip = "Remove \"Correct Lyrics\" mark";
+                        isMarkedFlag = true;
+                    }
+                }
             }
         }
     }

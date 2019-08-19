@@ -23,38 +23,50 @@ namespace Spotify_Lyrics.NET.API
             geniusClient = new GeniusClient("W0knrrPmfODbCT-Oe26Uimx8GJSqszwKyh34soM0oQuNRSppLmlOuHffrO8YD0iL");
         }
 
-        public async Task getLyrics(string artist, string song) 
+        public async Task getLyrics(string artist, string song, string lyricsURL = "", string coverImg = "", string songId = "") 
         {
-            // Search the song on Genius
-            var searchResult = await geniusClient.SearchClient.Search(TextFormat.Dom, Uri.EscapeDataString(artist) + "-" + Uri.EscapeDataString(song));
-
-            // Save all the valid search results
-            for (var r = 0; r < searchResult.Response.Count(); r++)
+            if (lyricsURL.Length == 0)
             {
-                Hit h = searchResult.Response[r];
-                string[] hContent = h.Result.ToString().Replace('"', '\'').Split('\n');
+                // Search the song on Genius
+                var searchResult = await geniusClient.SearchClient.Search(TextFormat.Dom, Uri.EscapeDataString(artist) + "-" + Uri.EscapeDataString(song));
 
+                // Save all the valid search results
+                for (var r = 0; r < searchResult.Response.Count(); r++)
+                {
+                    Hit h = searchResult.Response[r];
+                    string[] hContent = h.Result.ToString().Replace('"', '\'').Split('\n');
+
+                    MainWindow.lyricsURL lyricsObj = new MainWindow.lyricsURL();
+                    lyricsObj.source = "Genius";
+                    for (var x = 0; x < hContent.Count(); x++)
+                    {
+                        var ln = hContent[x];
+                        if (ln.Contains("'id':"))
+                        {
+                            lyricsObj.id = ln.Replace("  'id': ", "").Replace(",\r", "");
+                            if (lyricsObj.img != null) break;
+                        }
+                        else if (ln.Contains("'api_path':"))
+                        {
+                            lyricsObj.url = "https://genius.com" + ln.Replace("  'api_path': ", "").Replace(",\r", "").Replace("'", "");
+                        }
+                        else if (ln.Contains("'header_image_thumbnail_url':"))
+                        {
+                            lyricsObj.img = ln.Replace("  'header_image_thumbnail_url': '", "").Replace("',\r", "");
+                            if (lyricsObj.id != null) break;
+                        }
+                    }
+
+                    mainW.lyricsURLs.Add(lyricsObj);
+                }
+            }
+            else
+            {
                 MainWindow.lyricsURL lyricsObj = new MainWindow.lyricsURL();
                 lyricsObj.source = "Genius";
-                for (var x = 0; x < hContent.Count(); x++)
-                {
-                    var ln = hContent[x];
-                    if (ln.Contains("'id':"))
-                    {
-                        lyricsObj.id = ln.Replace("  'id': ", "").Replace(",\r", "");
-                        if (lyricsObj.img != null) break;
-                    }
-                    else if (ln.Contains("'api_path':"))
-                    {
-                        lyricsObj.url = "https://genius.com" + ln.Replace("  'api_path': ", "").Replace(",\r", "").Replace("'", "");
-                    }
-                    else if (ln.Contains("'header_image_thumbnail_url':"))
-                    {
-                        lyricsObj.img = ln.Replace("  'header_image_thumbnail_url': '", "").Replace("',\r", "");
-                        if (lyricsObj.id != null) break;
-                    }
-                }
-
+                lyricsObj.id = songId;
+                lyricsObj.url = lyricsURL;
+                lyricsObj.img = coverImg;
                 mainW.lyricsURLs.Add(lyricsObj);
             }
         }

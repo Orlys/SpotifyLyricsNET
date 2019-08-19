@@ -172,6 +172,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="API\FileSystemHelper.cs" />
     <Compile Include="API\GeniusAPI.cs" />
     <Compile Include="API\MusixmatchAPI.cs" />
     <Compile Include="API\UpdateHelper.cs" />
@@ -232,9 +233,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="SpotifyLyricsNET-logo-v1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\spotify-lyrics-net-v1-2.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.5.0.0\build\Fody.targets" Condition="Exists('..\packages\Fody.5.0.0\build\Fody.targets')" />
