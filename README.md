@@ -1,9 +1,9 @@
 ![](/Screenshots/SpotifyLyricsNET-logo-v1.png)
 # Spotify Lyrics .NET
-![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v1.3.0-blue.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.6.0-blue.svg?style=flat)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/CSharp_source-v1.4.0-blue.svg?style=flat) ![](https://img.shields.io/badge/VB.NET_source-v0.6.0-blue.svg?style=flat)
 > Get the lyrics of the song you're listening to on Spotify
 
-![](/Screenshots/SpotifyLyricsNET-v1.2.0.png)
+![](/Screenshots/SpotifyLyricsNET-v1.4.0.png)
 
 # Requirements
 ## To use the software:
@@ -11,7 +11,7 @@
 - Spotify
 - Internet Connection
 
-> The software has been most recently tested with **Spotify 1.1.12.449.g4109e645**.<br>I can't guarantee that it works with other versions.
+> The software has been most recently tested with **Spotify 1.1.12.451.gdb77255f**.<br>I can't guarantee that it works with other versions.
 
 Download the latest version from the [Releases](https://github.com/JakubSteplowski/SpotifyLyricsNET/releases) section.
 
@@ -27,10 +27,17 @@ Download the latest version from the [Releases](https://github.com/JakubSteplows
 > Notes:<br>
 > Date format: DD/MM/YYYY
 
+>v1.4.0 (20/08/2019):
+>- Added ability to mark lyrics as "correct", so those will appear every time you listen to that song
+>- Added message when a new version is available (Win32 only)
+>- Improved UI, corrected Spotify colors & more
+>*(the source of this version is available only in C#)*
+
 >v1.3.0 (08/08/2019):
 >- Improved lyrics fetching
 >- Search of the first available lyrics (check them all until find one, not only the first 3)
 >- Fixed and improved Genius API
+>*(the source of this version is available only in C#)*
 
 >v1.2.0 (07/08/2019):
 >- Improved UI, more clean
