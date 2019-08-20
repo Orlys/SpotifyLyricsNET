@@ -1,0 +1,46 @@
+﻿<Window
+    x:Class="Spotify_Lyrics.NET.Dialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+    Title="New update available!"
+    Height="185"
+    Width="380"
+    Topmost="True"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="ToolWindow"
+    ResizeMode="NoResize"
+    UseLayoutRounding="True"
+    TextOptions.TextFormattingMode="Display">
+
+    <Grid x:Name="dialogGrid">
+        <Grid Margin="20,10,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="0,0,0,5">
+                <TextBlock x:Name="dialogTitle" TextTrimming="WordEllipsis" Text="VERSION is available!" Style="{DynamicResource BoldFont}" Foreground="#FFF" FontSize="22"/>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="0,0,0,20">
+                <TextBlock x:Name="dialogText" TextTrimming="WordEllipsis" Text="Do you want to download it now?" Style="{DynamicResource BookFont}" Foreground="#FFF" FontSize="14"/>
+            </Grid>
+
+            <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="yesBtn" Grid.Column="0" Width="65" Height="30" Style="{DynamicResource RoundCorner}" FontFamily="Resources/#Circular Bold" Foreground="#FFF" FontSize="12" HorizontalAlignment="Right" Margin="0,0,4,0" FontStretch="ExtraCondensed" Click="YesBtn_Click">
+                    Yes
+                </Button>
+                <Button x:Name="noBtn" Grid.Column="1" Width="65" Height="30" Style="{DynamicResource RoundCorner}" FontFamily="Resources/#Circular Bold" Foreground="#FFF" FontSize="12" HorizontalAlignment="Right" Margin="4,0,0,0" FontStretch="ExtraCondensed" Click="NoBtn_Click">
+                    No
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
