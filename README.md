@@ -30,13 +30,13 @@ Download the latest version from the [Releases](https://github.com/JakubSteplows
 >v1.4.0 (20/08/2019):
 >- Added ability to mark lyrics as "correct", so those will appear every time you listen to that song
 >- Added message when a new version is available (Win32 only)
->- Improved UI, corrected Spotify colors & more
+>- Improved UI, corrected Spotify colors & more<br>
 >*(the source of this version is available only in C#)*
 
 >v1.3.0 (08/08/2019):
 >- Improved lyrics fetching
 >- Search of the first available lyrics (check them all until find one, not only the first 3)
->- Fixed and improved Genius API
+>- Fixed and improved Genius API<br>
 >*(the source of this version is available only in C#)*
 
 >v1.2.0 (07/08/2019):
