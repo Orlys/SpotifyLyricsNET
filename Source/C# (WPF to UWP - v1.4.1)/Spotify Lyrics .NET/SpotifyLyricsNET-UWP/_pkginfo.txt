@@ -1,0 +1,1 @@
+D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.4.1)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\bin\x86\Release\Upload\SpotifyLyricsNET-UWP_1.4.1.0\SpotifyLyricsNET-UWP_1.4.1.0_x86_x64.appxbundle

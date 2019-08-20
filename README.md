@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/Current_Version-v1.4.0-blue.svg?style=flat)
 > Get the lyrics of the song you're listening to on Spotify
 
-![](/Screenshots/SpotifyLyricsNET-v1.4.0.png)
+![](/Screenshots/SpotifyLyricsNET-v1.4.1.png)
 
 # Requirements
 ## To use the software:
@@ -26,6 +26,11 @@ Download the latest version from the [Releases](https://github.com/JakubSteplows
 
 > Notes:<br>
 > Date format: DD/MM/YYYY
+
+>v1.4.1 (20/08/2019):
+>- Fixed bug that caused crash if you tried to mark as "correct" missing lyrics
+>- Fixed UI glitch (mark as correct icon didn't change color when you changed the theme)<br>
+>*(the source of this version is available only in C#)*
 
 >v1.4.0 (20/08/2019):
 >- Added ability to mark lyrics as "correct", so those will appear every time you listen to that song

@@ -1,1 +1,0 @@
-D:\Documenti\Source\Repos\SpotifyLyricsNET\Source\C# (WPF to UWP - v1.4.0)\Spotify Lyrics .NET\SpotifyLyricsNET-UWP\SpotifyLyricsNET-UWP.wapproj;x64
